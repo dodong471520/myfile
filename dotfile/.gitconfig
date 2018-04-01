@@ -1,0 +1,12 @@
+[user]
+	name = dodong471520
+	email = 1012131075@qq.com
+[core]
+	autocrlf = input
+	excludesfile = /root/.gitignore
+[credential]
+	helper = store
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
