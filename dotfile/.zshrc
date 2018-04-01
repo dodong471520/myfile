@@ -110,6 +110,8 @@ export PS="/mnt/hgfs/H/work/package"
 export PG="mirrors.ustc.edu.cn"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export LD_LIBRARY_PATH=/usr/local/lib
+# export PERL5LIB=$PERL5LIB:/usr/local/lib/perl5/site_perl/5.26.1:/usr/local/lib/perl5/site_perl/5.26.1/x86_64-linux
+
 
 
 # gconftool-2 -t bool -s /apps/rhsm-icon/hide_icon true
