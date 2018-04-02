@@ -105,6 +105,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/.fzf/bin
 alias ctagscpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q"
 alias gl='ghq look $(ghq list|fzf)'
 # alias vim="vimx"
+alias perldb='perl -d:Trepan'
 alias chrome="google-chrome-stable --no-sandbox"
 export PS="/mnt/hgfs/H/work/package"
 export PG="mirrors.ustc.edu.cn"
