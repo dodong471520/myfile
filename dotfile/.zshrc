@@ -104,13 +104,13 @@ export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/.fzf/bin
 alias ctagscpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q"
 alias gl='ghq look $(ghq list|fzf)'
-alias vim="vimx"
+# alias vim="vimx"
 alias chrome="google-chrome-stable --no-sandbox"
 export PS="/mnt/hgfs/H/work/package"
 export PG="mirrors.ustc.edu.cn"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export LD_LIBRARY_PATH=/usr/local/lib
-# export PERL5LIB=$PERL5LIB:/usr/local/lib/perl5/site_perl/5.26.1:/usr/local/lib/perl5/site_perl/5.26.1/x86_64-linux
+export PERL5LIB=$PERL5LIB:/usr/local/lib/perl5/site_perl/5.26.1:/usr/local/lib/perl5/site_perl/5.26.1/x86_64-linux
 
 
 
