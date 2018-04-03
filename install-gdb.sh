@@ -3,4 +3,9 @@
 #install textinfo
 
 source  ./install-define.sh
-ln -fs $DOT_PATH/.gdbinit ~/.gdbinit
+ln -fs $GIT_PATH/cyrus-and/gdb-dashboard/.gdbinit ~/.gdbinit
+ln -fs $DOT_PATH/.gdbinit.d ~/.gdbinit.d
+
+
+ghq get https://github.com/cyrus-and/gdb-dashboard
+
