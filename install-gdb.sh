@@ -4,7 +4,7 @@
 
 source  ./install-define.sh
 ln -fs $MY_GIT/gdb-dashboard/.gdbinit ~/.gdbinit
-ln -fs $DOT_PATH/.gdbinit.d ~/.gdbinit.d
+ln -fsn $DOT_PATH/.gdbinit.d ~/.gdbinit.d
 
 
 ghq get https://github.com/dodong471520/gdb-dashboard
