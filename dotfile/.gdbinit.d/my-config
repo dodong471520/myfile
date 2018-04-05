@@ -1,1 +1,2 @@
-dashboard -layout source stack threads
+dashboard -layout source !stack !threads vim
+dashboard source -style context 12

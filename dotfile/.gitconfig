@@ -10,7 +10,11 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+; [http]
+	; proxy = socks5://192.168.0.5:1080
+; [https]
+	; proxy = socks5://192.168.0.5:1080
 [http]
-	proxy = socks5://192.168.0.5:1080
+    proxy = socks5://192.168.1.106:1080
 [https]
-	proxy = socks5://192.168.0.5:1080
+    proxy = socks5://192.168.1.106:1080
