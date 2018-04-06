@@ -41,11 +41,33 @@ def SendToVim(msg):
     cmd1 = "vim --servername gdb --remote-send '" + msg + "'"
     return os.system(cmd1)
 
+global is_load_breakpoints
+is_load_breakpoints=False
+
+def LoadBreakPoints():
+    global is_load_breakpoints
+    if is_load_breakpoints:
+        return
+    prompt=gdb.execute("source .gdb-breakpoints",to_string=True)
+    find_index=prompt.find("No source file")
+    if find_index!=-1:
+        #  os.system("cp .gdb-breakpoints .gdb-breakpoints-bak")
+        #  WriteLine(prompt)
+        WriteLine("still load error!!")
+        return
+    is_load_breakpoints=True
+
+def SaveBreakPoints():
+    global is_load_breakpoints
+    if not is_load_breakpoints:
+        WriteLine("still not load breakpoints!")
+        return
+    gdb.execute("save breakpoints .gdb-breakpoints")
+
 class VimCommand(gdb.Command):
     def __init__(self):
         gdb.Command.__init__(self, 'vim', gdb.COMMAND_USER, gdb.COMPLETE_NONE, True)
         self.enabled=False
-        self.is_load_breakpoints=False
 
     def enable(self):
         if self.enabled:
@@ -79,42 +101,17 @@ class VimCommand(gdb.Command):
 
     def invoke(self,arg,from_tty):
         self.focuse_current_line()
-        self.save_breakpoints()
 
     def focuse_current_line(self):
         symline = gdb.decode_line()[1][0]
         symtab = symline.symtab
         #  WriteLine(symtab.fullname())
-        SendToVim(":sil call MyGdb_UpdatePointer(\"" + symtab.fullname() + "\"," + str(symline.line) + ")<cr><cr>")
+        sendmsg=":sil call MyGdb_UpdatePointer(\"" + symtab.fullname() + "\"," + str(symline.line) + ")<cr><cr>"
+        WriteLine(sendmsg)
+        SendToVim(sendmsg)
 
-    def load_breakpoints(self):
-        if self.is_load_breakpoints:
-            return
-        prompt=gdb.execute("source .gdb-breakpoints",to_string=True)
-        find_index=prompt.find("No source file")
-        if find_index!=-1:
-            os.system("cp .gdb-breakpoints .gdb-breakpoints-bak")
-            WriteLine(prompt)
-            WriteLine("todo:breakpoint file wrong,fix in bak file!!")
-        self.is_load_breakpoints=True
-
-    def save_breakpoints(self):
-        if not self.is_load_breakpoints:
-            return
-        breakpoints=gdb.breakpoints()
-        write_str=""
-        for breakpoint in breakpoints:
-            file,line=GetBreakPointInfo(breakpoint.number)
-            write_str+="break "+file+":"+line+"\n"
-        #  WriteLine(write_str)
-        fo=open(".gdb-breakpoints","w")
-        fo.write(write_str)
-        fo.close()
 
     def on_breakpoint_modified(self,break_point):
-        #  WriteLine("okkkkkkkkkkkkkkkkkkkkkkkk"+str(self.is_load_breakpoints))
-        #  if not self.is_load_breakpoints:
-            #  return
         number=break_point.number
         enabled=0
         if break_point.enabled:
@@ -122,14 +119,10 @@ class VimCommand(gdb.Command):
         file,line=GetBreakPointInfo(number)
         sendmsg=":sil call MyGdb_BreakPointCreated("+str(number)+",\""+file+"\","+line+","+str(enabled)+")<cr><cr>"
         SendToVim(sendmsg)
-        #  self.save_breakpoints()
 
     def on_breakpoint_deleted(self,break_point):
-        #  if not self.is_load_breakpoints:
-            #  return
         number=break_point.number
         SendToVim(":sil call MyGdb_BreakPointDeleted("+str(number)+")<cr><cr>")
-        #  self.save_breakpoints()
 
     def on_new_inferior(self,_):
         pass
@@ -142,7 +135,6 @@ class VimCommand(gdb.Command):
         #  gdb.flush()
 
     def on_cont(self,arg1):
-        #  self.load_breakpoints()
         #  gdb.write("eeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
         #  gdb.write("\n")
         #  gdb.flush()
@@ -162,7 +154,6 @@ class VimCommand(gdb.Command):
 
     def on_new_objfile(self,arg1):
         #  WriteLine("newobjddddddddddddddddddddddddddddddddd")
-        #  self.load_breakpoints()
         #  gdb.write("ooooooooooooooooooooooo")
         #  gdb.write("\n")
         #  gdb.flush()
@@ -174,7 +165,6 @@ class VimCommand(gdb.Command):
 
     def on_new_thread(self,arg1):
         #  WriteLine("bbbbbbbbbbbbbbbbbbbbb")
-        #  self.load_breakpoints()
         pass
 
 
@@ -190,4 +180,21 @@ python VimCommand.start()
 dashboard -layout source !stack !threads
 dashboard source -style context 12
 
-
+define hookpost-file
+    #  python LoadBreakPoints()
+end
+define hookpost-break
+    python SaveBreakPoints()
+end
+define hookpost-trace
+    python SaveBreakPoints()
+end
+define hookpost-delete
+    python SaveBreakPoints()
+end
+define sbreak
+    python SaveBreakPoints()
+end
+define lbreak
+    python LoadBreakPoints()
+end
