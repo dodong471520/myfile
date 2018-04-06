@@ -1,0 +1,86 @@
+python
+
+import ast
+import fcntl
+import os
+import re
+import struct
+import termios
+import traceback
+import math
+import json
+
+
+def SendToVim(msg):
+    cmd1 = "vim --servername gdb --remote-send '" + msg + "'"
+    return os.system(cmd1)
+
+class VimCommand(gdb.Command):
+    def __init__(self):
+        gdb.Command.__init__(self, 'vim', gdb.COMMAND_USER, gdb.COMPLETE_NONE, True)
+        self.enabled=False
+
+    def enable(self):
+        if self.enabled:
+            return
+        self.enabled=True
+        gdb.events.breakpoint_created.connect(self.on_breakpoint_modified)
+        gdb.events.breakpoint_modified.connect(self.on_breakpoint_modified)
+        gdb.events.breakpoint_deleted.connect(self.on_breakpoint_deleted)
+
+    def disable(self):
+        if not self.enabled:
+            return
+        self.enabled=False
+        gdb.events.breakpoint_created.disconnect(self.on_breakpoint_modified)
+        gdb.events.breakpoint_modified.disconnect(self.on_breakpoint_modified)
+        gdb.events.breakpoint_deleted.disconnect(self.on_breakpoint_deleted)
+
+    def on_breakpoint_modified(self,break_point):
+       number=break_point.number
+       enabled=0
+       if break_point.enabled:
+            enabled=1
+       location=break_point.location
+       file_line=location.split(':')
+       if len(file_line)<2:
+            return
+       sendmsg=":sil call MyGdb_BreakPointCreated("+str(number)+",\""+file_line[0]+"\","+file_line[1]+","+str(enabled)+")<cr><cr>"
+       #  gdb.write(sendmsg)
+       #  gdb.write("\n")
+       SendToVim(sendmsg)
+
+    def on_breakpoint_deleted(self,break_point):
+       number=break_point.number
+       SendToVim(":sil call MyGdb_BreakPointDeleted("+str(number)+")<cr><cr>")
+
+    @staticmethod
+    def start():
+        vimcommand=VimCommand()
+        vimcommand.enable()
+
+end
+
+python VimCommand.start()
+
+dashboard -layout source !stack !threads vim
+dashboard source -style context 12
+
+define hookpost-file
+    source .gdb-breakpoints
+    source .gdb-tracepoints
+end
+define hookpost-break
+    shell rm -f .gdb-breakpoints
+    save breakpoints .gdb-breakpoints
+end
+define hookpost-trace
+    shell rm -f .gdb-tracepoints
+    save tracepoints .gdb-tracepoints
+end
+define hookpost-delete
+    shell rm -f .gdb-breakpoints
+    shell rm -f .gdb-tracepoints
+    save breakpoints .gdb-breakpoints
+    save tracepoints .gdb-tracepoints
+end
