@@ -59,6 +59,8 @@ class VimCommand(gdb.Command):
         gdb.events.exited.connect(self.on_exited)
         gdb.events.new_inferior.connect(self.on_new_inferior)
         gdb.events.new_objfile.connect(self.on_new_objfile)
+        gdb.events.before_prompt.connect(self.on_before_prompt)
+        gdb.events.new_thread.connect(self.on_new_thread)
 
     def disable(self):
         if not self.enabled:
@@ -72,6 +74,8 @@ class VimCommand(gdb.Command):
         gdb.events.exited.disable(self.on_exited)
         gdb.events.new_inferior.disconnect(self.on_new_inferior)
         gdb.events.new_objfile.disable(self.on_new_objfile)
+        gdb.events.before_prompt.disable(self.on_before_prompt)
+        gdb.events.new_thread.disable(self.on_new_thread)
 
     def invoke(self,arg,from_tty):
         self.focuse_current_line()
@@ -102,15 +106,15 @@ class VimCommand(gdb.Command):
         for breakpoint in breakpoints:
             file,line=GetBreakPointInfo(breakpoint.number)
             write_str+="break "+file+":"+line+"\n"
-        WriteLine(write_str)
+        #  WriteLine(write_str)
         fo=open(".gdb-breakpoints","w")
         fo.write(write_str)
         fo.close()
 
     def on_breakpoint_modified(self,break_point):
-        WriteLine("okkkkkkkkkkkkkkkkkkkkkkkk"+str(self.is_load_breakpoints))
-        if not self.is_load_breakpoints:
-            return
+        #  WriteLine("okkkkkkkkkkkkkkkkkkkkkkkk"+str(self.is_load_breakpoints))
+        #  if not self.is_load_breakpoints:
+            #  return
         number=break_point.number
         enabled=0
         if break_point.enabled:
@@ -118,14 +122,14 @@ class VimCommand(gdb.Command):
         file,line=GetBreakPointInfo(number)
         sendmsg=":sil call MyGdb_BreakPointCreated("+str(number)+",\""+file+"\","+line+","+str(enabled)+")<cr><cr>"
         SendToVim(sendmsg)
-        self.save_breakpoints()
+        #  self.save_breakpoints()
 
     def on_breakpoint_deleted(self,break_point):
-        if not self.is_load_breakpoints:
-            return
+        #  if not self.is_load_breakpoints:
+            #  return
         number=break_point.number
         SendToVim(":sil call MyGdb_BreakPointDeleted("+str(number)+")<cr><cr>")
-        self.save_breakpoints()
+        #  self.save_breakpoints()
 
     def on_new_inferior(self,_):
         pass
@@ -138,7 +142,7 @@ class VimCommand(gdb.Command):
         #  gdb.flush()
 
     def on_cont(self,arg1):
-        self.load_breakpoints()
+        #  self.load_breakpoints()
         #  gdb.write("eeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
         #  gdb.write("\n")
         #  gdb.flush()
@@ -157,11 +161,21 @@ class VimCommand(gdb.Command):
         pass
 
     def on_new_objfile(self,arg1):
-        WriteLine("newobjddddddddddddddddddddddddddddddddd")
+        #  WriteLine("newobjddddddddddddddddddddddddddddddddd")
         #  self.load_breakpoints()
         #  gdb.write("ooooooooooooooooooooooo")
         #  gdb.write("\n")
         #  gdb.flush()
+        pass
+
+    def on_before_prompt(self):
+        #  WriteLine(arg1)
+        pass
+
+    def on_new_thread(self,arg1):
+        #  WriteLine("bbbbbbbbbbbbbbbbbbbbb")
+        #  self.load_breakpoints()
+        pass
 
 
     @staticmethod
@@ -175,3 +189,5 @@ python VimCommand.start()
 
 dashboard -layout source !stack !threads
 dashboard source -style context 12
+
+
