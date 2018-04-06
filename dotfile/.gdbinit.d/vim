@@ -10,6 +10,32 @@ import traceback
 import math
 import json
 
+def WriteLine(line):
+    gdb.write(line)
+    gdb.write("\n")
+    gdb.flush()
+
+def GetBreakPointInfo(number):
+    location_info=gdb.execute("info break "+str(number),to_string=True)
+    find_index=location_info.find(" at ")
+    if find_index==-1:
+        return
+    find_index2=location_info.find(":",find_index+1)
+    if find_index2==-1:
+        return
+    find_index3=location_info.find("\n",find_index2+1)
+    if find_index3==-1:
+        return
+    file=location_info[find_index+4:find_index2]
+    line=location_info[find_index2+1:find_index3]
+    #  gdb.write("OKKKKKKKKK")
+    #  gdb.write("\n")
+    #  gdb.write(line)
+    #  gdb.write("\n")
+    #  gdb.write("OKKKKKKKKK")
+    #  gdb.write("\n")
+    #  gdb.flush()
+    return file,line
 
 def SendToVim(msg):
     cmd1 = "vim --servername gdb --remote-send '" + msg + "'"
@@ -19,6 +45,7 @@ class VimCommand(gdb.Command):
     def __init__(self):
         gdb.Command.__init__(self, 'vim', gdb.COMMAND_USER, gdb.COMPLETE_NONE, True)
         self.enabled=False
+        self.is_load_breakpoints=False
 
     def enable(self):
         if self.enabled:
@@ -27,6 +54,11 @@ class VimCommand(gdb.Command):
         gdb.events.breakpoint_created.connect(self.on_breakpoint_modified)
         gdb.events.breakpoint_modified.connect(self.on_breakpoint_modified)
         gdb.events.breakpoint_deleted.connect(self.on_breakpoint_deleted)
+        gdb.events.cont.connect(self.on_cont)
+        gdb.events.stop.connect(self.on_stop)
+        gdb.events.exited.connect(self.on_exited)
+        gdb.events.new_inferior.connect(self.on_new_inferior)
+        gdb.events.new_objfile.connect(self.on_new_objfile)
 
     def disable(self):
         if not self.enabled:
@@ -35,24 +67,102 @@ class VimCommand(gdb.Command):
         gdb.events.breakpoint_created.disconnect(self.on_breakpoint_modified)
         gdb.events.breakpoint_modified.disconnect(self.on_breakpoint_modified)
         gdb.events.breakpoint_deleted.disconnect(self.on_breakpoint_deleted)
+        gdb.events.cont.disable(self.on_cont)
+        gdb.events.stop.disable(self.on_stop)
+        gdb.events.exited.disable(self.on_exited)
+        gdb.events.new_inferior.disconnect(self.on_new_inferior)
+        gdb.events.new_objfile.disable(self.on_new_objfile)
+
+    def invoke(self,arg,from_tty):
+        self.focuse_current_line()
+        self.save_breakpoints()
+
+    def focuse_current_line(self):
+        symline = gdb.decode_line()[1][0]
+        symtab = symline.symtab
+        #  WriteLine(symtab.fullname())
+        SendToVim(":sil call MyGdb_UpdatePointer(\"" + symtab.fullname() + "\"," + str(symline.line) + ")<cr><cr>")
+
+    def load_breakpoints(self):
+        if self.is_load_breakpoints:
+            return
+        prompt=gdb.execute("source .gdb-breakpoints",to_string=True)
+        find_index=prompt.find("No source file")
+        if find_index!=-1:
+            os.system("cp .gdb-breakpoints .gdb-breakpoints-bak")
+            WriteLine(prompt)
+            WriteLine("todo:breakpoint file wrong,fix in bak file!!")
+        self.is_load_breakpoints=True
+
+    def save_breakpoints(self):
+        if not self.is_load_breakpoints:
+            return
+        breakpoints=gdb.breakpoints()
+        write_str=""
+        for breakpoint in breakpoints:
+            file,line=GetBreakPointInfo(breakpoint.number)
+            write_str+="break "+file+":"+line+"\n"
+        WriteLine(write_str)
+        fo=open(".gdb-breakpoints","w")
+        fo.write(write_str)
+        fo.close()
 
     def on_breakpoint_modified(self,break_point):
-       number=break_point.number
-       enabled=0
-       if break_point.enabled:
-            enabled=1
-       location=break_point.location
-       file_line=location.split(':')
-       if len(file_line)<2:
+        WriteLine("okkkkkkkkkkkkkkkkkkkkkkkk"+str(self.is_load_breakpoints))
+        if not self.is_load_breakpoints:
             return
-       sendmsg=":sil call MyGdb_BreakPointCreated("+str(number)+",\""+file_line[0]+"\","+file_line[1]+","+str(enabled)+")<cr><cr>"
-       #  gdb.write(sendmsg)
-       #  gdb.write("\n")
-       SendToVim(sendmsg)
+        number=break_point.number
+        enabled=0
+        if break_point.enabled:
+            enabled=1
+        file,line=GetBreakPointInfo(number)
+        sendmsg=":sil call MyGdb_BreakPointCreated("+str(number)+",\""+file+"\","+line+","+str(enabled)+")<cr><cr>"
+        SendToVim(sendmsg)
+        self.save_breakpoints()
 
     def on_breakpoint_deleted(self,break_point):
-       number=break_point.number
-       SendToVim(":sil call MyGdb_BreakPointDeleted("+str(number)+")<cr><cr>")
+        if not self.is_load_breakpoints:
+            return
+        number=break_point.number
+        SendToVim(":sil call MyGdb_BreakPointDeleted("+str(number)+")<cr><cr>")
+        self.save_breakpoints()
+
+    def on_new_inferior(self,_):
+        pass
+        #  gdb.execute('r')
+        #  gdb.write("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKOK")
+        #  gdb.write("\n")
+        #  dump_info=gdb.execute("info inferior")
+        #  dump_list=dump_info.split()
+        #  gdb.write(len(dump_list))
+        #  gdb.flush()
+
+    def on_cont(self,arg1):
+        self.load_breakpoints()
+        #  gdb.write("eeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+        #  gdb.write("\n")
+        #  gdb.flush()
+        pass
+
+    def on_stop(self,arg1):
+        self.focuse_current_line()
+        #  gdb.write("okkkkkkkkkkkkkkkkkkkkkkkkk")
+        #  gdb.write("\n")
+        #  gdb.flush()
+
+    def on_exited(self,arg1):
+        #  gdb.write("ddddddddddddddddddddddddd")
+        #  gdb.write("\n")
+        #  gdb.flush()
+        pass
+
+    def on_new_objfile(self,arg1):
+        WriteLine("newobjddddddddddddddddddddddddddddddddd")
+        #  self.load_breakpoints()
+        #  gdb.write("ooooooooooooooooooooooo")
+        #  gdb.write("\n")
+        #  gdb.flush()
+
 
     @staticmethod
     def start():
@@ -63,24 +173,5 @@ end
 
 python VimCommand.start()
 
-dashboard -layout source !stack !threads vim
+dashboard -layout source !stack !threads
 dashboard source -style context 12
-
-define hookpost-file
-    source .gdb-breakpoints
-    source .gdb-tracepoints
-end
-define hookpost-break
-    shell rm -f .gdb-breakpoints
-    save breakpoints .gdb-breakpoints
-end
-define hookpost-trace
-    shell rm -f .gdb-tracepoints
-    save tracepoints .gdb-tracepoints
-end
-define hookpost-delete
-    shell rm -f .gdb-breakpoints
-    shell rm -f .gdb-tracepoints
-    save breakpoints .gdb-breakpoints
-    save tracepoints .gdb-tracepoints
-end
