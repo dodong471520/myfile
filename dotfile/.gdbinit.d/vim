@@ -28,13 +28,6 @@ def GetBreakPointInfo(number):
         return
     file=location_info[find_index+4:find_index2]
     line=location_info[find_index2+1:find_index3]
-    #  gdb.write("OKKKKKKKKK")
-    #  gdb.write("\n")
-    #  gdb.write(line)
-    #  gdb.write("\n")
-    #  gdb.write("OKKKKKKKKK")
-    #  gdb.write("\n")
-    #  gdb.flush()
     return file,line
 
 def SendToVim(msg):
@@ -43,24 +36,34 @@ def SendToVim(msg):
 
 global is_load_breakpoints
 is_load_breakpoints=False
+global breakpoint_path
+breakpoint_path=None
 
 def LoadBreakPoints():
     global is_load_breakpoints
-    if is_load_breakpoints:
+    global breakpoint_path
+    if not breakpoint_path:
         return
-    prompt=gdb.execute("source .gdb-breakpoints",to_string=True)
-    find_index=prompt.find("No source file")
-    if find_index!=-1:
-        #  os.system("cp .gdb-breakpoints .gdb-breakpoints-bak")
-        #  WriteLine(prompt)
-        WriteLine("still load error!!")
-        return
-    is_load_breakpoints=True
+    sendmsg=":sil call MyGdb_CleanSign()<cr><cr>"
+    SendToVim(sendmsg)
+    if not is_load_breakpoints:
+        gdb.execute("delete")
+        prompt=gdb.execute("source "+breakpoint_path,to_string=True)
+        find_index=prompt.find("No source file")
+        if find_index!=-1:
+            #  os.system("cp .gdb-breakpoints .gdb-breakpoints-bak")
+            #  WriteLine(prompt)
+            WriteLine("fail load "+breakpoint_path+"!")
+            return
+        is_load_breakpoints=True
 
 def SaveBreakPoints():
     global is_load_breakpoints
+    global breakpoint_path
     if not is_load_breakpoints:
-        WriteLine("still not load breakpoints!")
+        #  WriteLine("still not load breakpoints!")
+        return
+    if not breakpoint_path:
         return
     breakpoints=gdb.breakpoints()
     write_str=""
@@ -71,14 +74,45 @@ def SaveBreakPoints():
         if find_index==-1:
             write_str+=file_line+"\n"
     #  WriteLine(write_str)
-    fo=open(".gdb-breakpoints","w")
+    fo=open(breakpoint_path,"w")
     fo.write(write_str)
     fo.close()
     #  gdb.execute("save breakpoints .gdb-breakpoints")
 
-class VimCommand(gdb.Command):
+def GdbExecute(cmd,wrong=None):
+    prompt=gdb.execute(cmd,to_string=True)
+    WriteLine("+"+cmd)
+    WriteLine(prompt)
+    if wrong is not None:
+        find_index=prompt.find(wrong)
+        if find_index!=-1:
+            WriteLine("fail:"+cmd+"!")
+            return False
+    return True
+
+class Reload(gdb.Command):
+    @staticmethod
+    def start():
+        command=Reload()
     def __init__(self):
-        gdb.Command.__init__(self, 'vim', gdb.COMMAND_USER, gdb.COMPLETE_NONE, True)
+        gdb.Command.__init__(self,'reload',gdb.COMMAND_USER,gdb.COMPLETE_FILENAME,True)
+    def invoke(self,fname,from_tty):
+        global breakpoint_path
+        fpath=gdb.current_progspace().filename
+        if fpath is None:
+            return
+        breakpoint_path=fpath+"-breakpoint"
+        gdb.execute("set scheduler-locking on")
+        LoadBreakPoints()
+        SaveBreakPoints()
+
+class VimCommand(gdb.Command):
+    @staticmethod
+    def start():
+        vimcommand=VimCommand()
+        vimcommand.enable()
+    def __init__(self):
+        gdb.Command.__init__(self,'vim',gdb.COMMAND_USER,gdb.COMPLETE_NONE,True)
         self.enabled=False
 
     def enable(self):
@@ -182,14 +216,12 @@ class VimCommand(gdb.Command):
         pass
 
 
-    @staticmethod
-    def start():
-        vimcommand=VimCommand()
-        vimcommand.enable()
 
 end
 
 python VimCommand.start()
+python Reload.start()
+
 
 dashboard -layout source !stack !threads
 dashboard source -style context 12
@@ -207,10 +239,5 @@ define hookpost-delete
     python SaveBreakPoints()
 end
 define sbreak
-    python SaveBreakPoints()
-end
-define lbreak
-    set scheduler-locking on
-    python LoadBreakPoints()
     python SaveBreakPoints()
 end
