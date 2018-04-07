@@ -62,7 +62,19 @@ def SaveBreakPoints():
     if not is_load_breakpoints:
         WriteLine("still not load breakpoints!")
         return
-    gdb.execute("save breakpoints .gdb-breakpoints")
+    breakpoints=gdb.breakpoints()
+    write_str=""
+    for breakpoint in breakpoints:
+        file,line=GetBreakPointInfo(breakpoint.number)
+        file_line="break "+file+":"+line
+        find_index=write_str.find(file_line)
+        if find_index==-1:
+            write_str+=file_line+"\n"
+    #  WriteLine(write_str)
+    fo=open(".gdb-breakpoints","w")
+    fo.write(write_str)
+    fo.close()
+    #  gdb.execute("save breakpoints .gdb-breakpoints")
 
 class VimCommand(gdb.Command):
     def __init__(self):
@@ -107,7 +119,7 @@ class VimCommand(gdb.Command):
         symtab = symline.symtab
         #  WriteLine(symtab.fullname())
         sendmsg=":sil call MyGdb_UpdatePointer(\"" + symtab.fullname() + "\"," + str(symline.line) + ")<cr><cr>"
-        WriteLine(sendmsg)
+        # WriteLine(sendmsg)
         SendToVim(sendmsg)
 
 
@@ -123,6 +135,8 @@ class VimCommand(gdb.Command):
     def on_breakpoint_deleted(self,break_point):
         number=break_point.number
         SendToVim(":sil call MyGdb_BreakPointDeleted("+str(number)+")<cr><cr>")
+        WriteLine("deleted "+str(number)+" at "+break_point.location)
+
 
     def on_new_inferior(self,_):
         pass
@@ -196,5 +210,7 @@ define sbreak
     python SaveBreakPoints()
 end
 define lbreak
+    set scheduler-locking on
     python LoadBreakPoints()
+    python SaveBreakPoints()
 end
