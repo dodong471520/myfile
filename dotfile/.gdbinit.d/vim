@@ -129,6 +129,7 @@ class VimCommand(gdb.Command):
         gdb.events.new_objfile.connect(self.on_new_objfile)
         gdb.events.before_prompt.connect(self.on_before_prompt)
         gdb.events.new_thread.connect(self.on_new_thread)
+        gdb.events.register_changed.connect(self.on_register_changed)
 
     def disable(self):
         if not self.enabled:
@@ -144,6 +145,7 @@ class VimCommand(gdb.Command):
         gdb.events.new_objfile.disable(self.on_new_objfile)
         gdb.events.before_prompt.disable(self.on_before_prompt)
         gdb.events.new_thread.disable(self.on_new_thread)
+        gdb.events.register_changed.disable(self.on_register_changed)
 
     def invoke(self,arg,from_tty):
         self.focuse_current_line()
@@ -215,7 +217,9 @@ class VimCommand(gdb.Command):
         #  WriteLine("bbbbbbbbbbbbbbbbbbbbb")
         pass
 
-
+    def on_register_changed(self):
+        WriteLine(type(gdb.register_changed.frame).__name__)
+        WriteLine(type(gdb.register_changed.regnum).__name__)
 
 end
 
@@ -225,6 +229,9 @@ python Reload.start()
 
 dashboard -layout source !stack !threads
 dashboard source -style context 12
+set target-async 1
+set pagination off
+set non-stop on
 
 define hookpost-file
     #  python LoadBreakPoints()
