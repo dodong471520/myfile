@@ -232,6 +232,7 @@ dashboard source -style context 12
 set target-async 1
 set pagination off
 set non-stop on
+handle SIGPROF nostop noprint pass
 
 define hookpost-file
     #  python LoadBreakPoints()
