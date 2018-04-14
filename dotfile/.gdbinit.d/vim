@@ -1,5 +1,6 @@
 python
 
+import re
 import ast
 import fcntl
 import os
@@ -17,18 +18,11 @@ def WriteLine(line):
 
 def GetBreakPointInfo(number):
     location_info=gdb.execute("info break "+str(number),to_string=True)
-    find_index=location_info.find(" at ")
-    if find_index==-1:
-        return
-    find_index2=location_info.find(":",find_index+1)
-    if find_index2==-1:
-        return
-    find_index3=location_info.find("\n",find_index2+1)
-    if find_index3==-1:
-        return
-    file=location_info[find_index+4:find_index2]
-    line=location_info[find_index2+1:find_index3]
-    return file,line
+    match=re.search(r'at (.+):(\d+)',location_info,flags=re.M)
+    if match is None:
+        #  WriteLine(location_info)
+        return None,None
+    return match.groups()
 
 def SendToVim(msg):
     cmd1 = "vim --servername gdb --remote-send '" + msg + "'"
@@ -69,6 +63,7 @@ def SaveBreakPoints():
     write_str=""
     for breakpoint in breakpoints:
         file,line=GetBreakPointInfo(breakpoint.number)
+        #  WriteLine(line)
         file_line="break "+file+":"+line
         find_index=write_str.find(file_line)
         if find_index==-1:
@@ -102,6 +97,7 @@ class Reload(gdb.Command):
         if fpath is None:
             return
         breakpoint_path=fpath+"-breakpoint"
+        #  WriteLine(breakpoint_path)
         gdb.execute("set scheduler-locking on")
         LoadBreakPoints()
         SaveBreakPoints()
@@ -165,7 +161,10 @@ class VimCommand(gdb.Command):
         if break_point.enabled:
             enabled=1
         file,line=GetBreakPointInfo(number)
+        if file is None:
+            return
         sendmsg=":sil call MyGdb_BreakPointCreated("+str(number)+",\""+file+"\","+line+","+str(enabled)+")<cr><cr>"
+        WriteLine(sendmsg)
         SendToVim(sendmsg)
 
     def on_breakpoint_deleted(self,break_point):
@@ -246,6 +245,6 @@ end
 define hookpost-delete
     python SaveBreakPoints()
 end
-define sbreak
+define savebreak
     python SaveBreakPoints()
 end
