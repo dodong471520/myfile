@@ -119,9 +119,9 @@ unalias gr
 unalias gg
 unalias gd
 alias gg='gr-get'
-alias gl='cd `gr tag list|fzf`'
-alias gw='gr @work'
-alias gd='gr @work git'
+alias gl='cd $(gr tag list|fzf)'
+# alias gw='gr @work'
+alias gw='gr @work git'
 
 
 

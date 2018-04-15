@@ -3,9 +3,8 @@
     "work": [
       "/root/git/.vim",
       "/root/git/space-vim",
-      "/root/git/gperftools",
       "/root/git/myfile",
-      "/root/git/gdb-dashboard"
+      "/root/git/gperftools"
     ]
   }
 }
