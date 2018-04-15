@@ -2,7 +2,8 @@
   "tags": {
     "work": [
       "/mnt/shared/git/myfile",
-      "/mnt/shared/git/.vim"
+      "/mnt/shared/git/.vim",
+      "/mnt/shared/git/space-vim"
     ]
   }
 }
