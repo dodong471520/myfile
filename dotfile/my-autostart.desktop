@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=my-autostart
+Exec=mount -t vboxsf shared /mnt/shared
+NoDisplay=true
+OnlyShowIn=GNOME;MATE;Unity;Cinnamon;
