@@ -1,9 +1,11 @@
 {
   "tags": {
     "work": [
-      "/mnt/shared/git/myfile",
-      "/mnt/shared/git/.vim",
-      "/mnt/shared/git/space-vim"
+      "/root/git/.vim",
+      "/root/git/space-vim",
+      "/root/git/gperftools",
+      "/root/git/myfile",
+      "/root/git/gdb-dashboard"
     ]
   }
 }

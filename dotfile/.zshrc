@@ -110,14 +110,18 @@ export LD_LIBRARY_PATH=/usr/local/lib
 export PERL5LIB=$PERL5LIB:/usr/local/lib/perl5/site_perl/5.26.1:/usr/local/lib/perl5/site_perl/5.26.1/x86_64-linux
 
 alias ctagscpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q"
-alias gl='ghq look $(ghq list|fzf)'
+# alias gl='ghq look $(ghq list|fzf)'
 # alias vim="vimx"
 alias perldb='perl -d:Trepan'
 alias chrome="google-chrome-stable --no-sandbox"
 alias vid='vim --servername gdb'
 unalias gr
-alias grget='gr-get'
-alias gl='cd `gr list`'
+unalias gg
+unalias gd
+alias gg='gr-get'
+alias gl='cd `gr tag list|fzf`'
+alias gw='gr @work'
+alias gd='gr @work git'
 
 
 
