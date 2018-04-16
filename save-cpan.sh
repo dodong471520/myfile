@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-cpan -l > save-cpan.out
+cpan -l > save-sub/save-cpan.out

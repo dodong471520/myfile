@@ -7,6 +7,9 @@ ln -fs $DOT_PATH/.bash_profile ~/.bash_profile
 #cp $DOT_PATH/custom.conf /etc/gdm/custom.conf
 cp $DOT_PATH/my-autostart.desktop ~/.config/autostart/my-autostart.desktop
 
+#
+dnf list installed autoconf||dnf install -y autoconf
+
 #grub
 sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub
 grub2-mkconfig -o /boot/grub2/grub.cfg
@@ -47,4 +50,6 @@ source ./install-zsh.sh
 source ./install-ag.sh
 #fzf
 source ./install-fzf.sh
+#gdb
+source ./install-gdb.sh
 cd ..
