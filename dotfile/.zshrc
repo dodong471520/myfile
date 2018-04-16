@@ -118,12 +118,11 @@ alias vid='vim --servername gdb'
 unalias gr
 unalias gg
 unalias gd
+unalias gl
 alias gg='gr-get'
-alias gl='cd $(gr tag list|fzf)'
+alias gl='cd $(gr tag list|fzf|sed -e "s| *~|$HOME|")'
 # alias gw='gr @work'
 alias gw='gr @work git'
-
-
 
 # gconftool-2 -t bool -s /apps/rhsm-icon/hide_icon true
 
