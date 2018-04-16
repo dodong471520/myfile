@@ -123,6 +123,7 @@ alias gg='gr-get'
 alias gl='cd $(gr tag list|fzf|sed -e "s| *~|$HOME|")'
 # alias gw='gr @work'
 alias gw='gr @work git'
+alias vim='vimx'
 
 # gconftool-2 -t bool -s /apps/rhsm-icon/hide_icon true
 
