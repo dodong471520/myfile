@@ -37,7 +37,6 @@ source ./install-shared.sh
 source ./install-dnf.sh
 #gr
 source ./install-gr.sh
-
 #git
 source ./install-git.sh
 #openbox
@@ -52,4 +51,8 @@ source ./install-ag.sh
 source ./install-fzf.sh
 #gdb
 source ./install-gdb.sh
+#vim
+source ./isntall-vim.sh
+#vim
+source ./isntall-go.sh
 cd ..

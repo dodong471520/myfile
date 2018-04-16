@@ -1,5 +1,2892 @@
-[90m~/git/[39m[37m.vim[39m
-[90m~/git/[39m[37mgdb-dashboard[39m
-[90m~/git/[39m[37mgperftools[39m
-[90m~/git/[39m[37mmyfile[39m
-[90m~/git/[39m[37mspace-vim[39m
+/root/git
+├── 123
+├── dodong471520
+│   ├── gdb-dashboard
+│   │   └── README.md
+│   ├── gperftools
+│   │   ├── AUTHORS
+│   │   ├── autogen.sh
+│   │   ├── benchmark
+│   │   │   ├── binary_trees.cc
+│   │   │   ├── getcontext_light.cc
+│   │   │   ├── malloc_bench.cc
+│   │   │   ├── run_benchmark.c
+│   │   │   ├── run_benchmark.h
+│   │   │   └── unwind_bench.cc
+│   │   ├── ChangeLog
+│   │   ├── ChangeLog.old
+│   │   ├── configure.ac
+│   │   ├── COPYING
+│   │   ├── demo.cc
+│   │   ├── docs
+│   │   │   ├── cpuprofile-fileformat.html
+│   │   │   ├── cpuprofile.html
+│   │   │   ├── designstyle.css
+│   │   │   ├── heap_checker.html
+│   │   │   ├── heap-example1.png
+│   │   │   ├── heapprofile.html
+│   │   │   ├── index.html
+│   │   │   ├── overview.dot
+│   │   │   ├── overview.gif
+│   │   │   ├── pageheap.dot
+│   │   │   ├── pageheap.gif
+│   │   │   ├── pprof.1
+│   │   │   ├── pprof_remote_servers.html
+│   │   │   ├── pprof.see_also
+│   │   │   ├── pprof-test-big.gif
+│   │   │   ├── pprof-test.gif
+│   │   │   ├── pprof-vsnprintf-big.gif
+│   │   │   ├── pprof-vsnprintf.gif
+│   │   │   ├── spanmap.dot
+│   │   │   ├── spanmap.gif
+│   │   │   ├── tcmalloc.html
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.1024.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.128.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.131072.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.16384.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.2048.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.256.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.32768.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.4096.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.512.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.64.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.65536.bytes.png
+│   │   │   ├── tcmalloc-opspercpusec.vs.threads.8192.bytes.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.12.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.16.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.1.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.20.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.2.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.3.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.4.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.5.threads.png
+│   │   │   ├── tcmalloc-opspersec.vs.size.8.threads.png
+│   │   │   ├── threadheap.dot
+│   │   │   ├── threadheap.gif
+│   │   │   └── t-test1.times.txt
+│   │   ├── gperftools.sln
+│   │   ├── INSTALL
+│   │   ├── lidong_read
+│   │   ├── m4
+│   │   │   ├── ac_have_attribute.m4
+│   │   │   ├── acx_nanosleep.m4
+│   │   │   ├── acx_pthread.m4
+│   │   │   ├── ax_generate_changelog.m4
+│   │   │   ├── compiler_characteristics.m4
+│   │   │   ├── install_prefix.m4
+│   │   │   ├── namespaces.m4
+│   │   │   ├── pc_from_ucontext.m4
+│   │   │   ├── program_invocation_name.m4
+│   │   │   └── stl_namespace.m4
+│   │   ├── Makefile.am
+│   │   ├── NEWS
+│   │   ├── packages
+│   │   │   ├── deb
+│   │   │   │   ├── changelog
+│   │   │   │   ├── compat
+│   │   │   │   ├── control
+│   │   │   │   ├── copyright
+│   │   │   │   ├── docs
+│   │   │   │   ├── libgperftools0.dirs
+│   │   │   │   ├── libgperftools0.install
+│   │   │   │   ├── libgperftools0.manpages
+│   │   │   │   ├── libgperftools-dev.dirs
+│   │   │   │   ├── libgperftools-dev.install
+│   │   │   │   ├── README
+│   │   │   │   └── rules
+│   │   │   ├── deb.sh
+│   │   │   ├── rpm
+│   │   │   │   └── rpm.spec
+│   │   │   └── rpm.sh
+│   │   ├── README
+│   │   ├── README_windows.txt
+│   │   ├── src
+│   │   │   ├── addressmap-inl.h
+│   │   │   ├── base
+│   │   │   │   ├── arm_instruction_set_select.h
+│   │   │   │   ├── atomicops.h
+│   │   │   │   ├── atomicops-internals-arm-generic.h
+│   │   │   │   ├── atomicops-internals-arm-v6plus.h
+│   │   │   │   ├── atomicops-internals-gcc.h
+│   │   │   │   ├── atomicops-internals-linuxppc.h
+│   │   │   │   ├── atomicops-internals-macosx.h
+│   │   │   │   ├── atomicops-internals-mips.h
+│   │   │   │   ├── atomicops-internals-windows.h
+│   │   │   │   ├── atomicops-internals-x86.cc
+│   │   │   │   ├── atomicops-internals-x86.h
+│   │   │   │   ├── basictypes.h
+│   │   │   │   ├── commandlineflags.h
+│   │   │   │   ├── dynamic_annotations.c
+│   │   │   │   ├── dynamic_annotations.h
+│   │   │   │   ├── elfcore.h
+│   │   │   │   ├── elf_mem_image.cc
+│   │   │   │   ├── elf_mem_image.h
+│   │   │   │   ├── googleinit.h
+│   │   │   │   ├── linux_syscall_support.h
+│   │   │   │   ├── linuxthreads.cc
+│   │   │   │   ├── linuxthreads.h
+│   │   │   │   ├── logging.cc
+│   │   │   │   ├── logging.h
+│   │   │   │   ├── low_level_alloc.cc
+│   │   │   │   ├── low_level_alloc.h
+│   │   │   │   ├── simple_mutex.h
+│   │   │   │   ├── spinlock.cc
+│   │   │   │   ├── spinlock.h
+│   │   │   │   ├── spinlock_internal.cc
+│   │   │   │   ├── spinlock_internal.h
+│   │   │   │   ├── spinlock_linux-inl.h
+│   │   │   │   ├── spinlock_posix-inl.h
+│   │   │   │   ├── spinlock_win32-inl.h
+│   │   │   │   ├── stl_allocator.h
+│   │   │   │   ├── sysinfo.cc
+│   │   │   │   ├── sysinfo.h
+│   │   │   │   ├── thread_annotations.h
+│   │   │   │   ├── thread_lister.c
+│   │   │   │   ├── thread_lister.h
+│   │   │   │   ├── vdso_support.cc
+│   │   │   │   └── vdso_support.h
+│   │   │   ├── central_freelist.cc
+│   │   │   ├── central_freelist.h
+│   │   │   ├── common.cc
+│   │   │   ├── common.h
+│   │   │   ├── config_for_unittests.h
+│   │   │   ├── debugallocation.cc
+│   │   │   ├── emergency_malloc.cc
+│   │   │   ├── emergency_malloc_for_stacktrace.cc
+│   │   │   ├── emergency_malloc.h
+│   │   │   ├── fake_stacktrace_scope.cc
+│   │   │   ├── getenv_safe.h
+│   │   │   ├── getpc.h
+│   │   │   ├── google
+│   │   │   │   ├── heap-checker.h
+│   │   │   │   ├── heap-profiler.h
+│   │   │   │   ├── malloc_extension_c.h
+│   │   │   │   ├── malloc_extension.h
+│   │   │   │   ├── malloc_hook_c.h
+│   │   │   │   ├── malloc_hook.h
+│   │   │   │   ├── profiler.h
+│   │   │   │   ├── stacktrace.h
+│   │   │   │   └── tcmalloc.h
+│   │   │   ├── gperftools
+│   │   │   │   ├── heap-checker.h
+│   │   │   │   ├── heap-profiler.h
+│   │   │   │   ├── malloc_extension_c.h
+│   │   │   │   ├── malloc_extension.h
+│   │   │   │   ├── malloc_hook_c.h
+│   │   │   │   ├── malloc_hook.h
+│   │   │   │   ├── nallocx.h
+│   │   │   │   ├── profiler.h
+│   │   │   │   ├── stacktrace.h
+│   │   │   │   └── tcmalloc.h.in
+│   │   │   ├── heap-checker-bcad.cc
+│   │   │   ├── heap-checker.cc
+│   │   │   ├── heap-profiler.cc
+│   │   │   ├── heap-profile-stats.h
+│   │   │   ├── heap-profile-table.cc
+│   │   │   ├── heap-profile-table.h
+│   │   │   ├── internal_logging.cc
+│   │   │   ├── internal_logging.h
+│   │   │   ├── libc_override_gcc_and_weak.h
+│   │   │   ├── libc_override_glibc.h
+│   │   │   ├── libc_override.h
+│   │   │   ├── libc_override_osx.h
+│   │   │   ├── libc_override_redefine.h
+│   │   │   ├── linked_list.h
+│   │   │   ├── malloc_extension.cc
+│   │   │   ├── malloc_hook.cc
+│   │   │   ├── malloc_hook-inl.h
+│   │   │   ├── malloc_hook_mmap_freebsd.h
+│   │   │   ├── malloc_hook_mmap_linux.h
+│   │   │   ├── maybe_emergency_malloc.h
+│   │   │   ├── maybe_threads.cc
+│   │   │   ├── maybe_threads.h
+│   │   │   ├── memfs_malloc.cc
+│   │   │   ├── memory_region_map.cc
+│   │   │   ├── memory_region_map.h
+│   │   │   ├── packed-cache-inl.h
+│   │   │   ├── page_heap_allocator.h
+│   │   │   ├── page_heap.cc
+│   │   │   ├── page_heap.h
+│   │   │   ├── pagemap.h
+│   │   │   ├── pprof
+│   │   │   ├── profiledata.cc
+│   │   │   ├── profiledata.h
+│   │   │   ├── profile-handler.cc
+│   │   │   ├── profile-handler.h
+│   │   │   ├── profiler.cc
+│   │   │   ├── raw_printer.cc
+│   │   │   ├── raw_printer.h
+│   │   │   ├── sampler.cc
+│   │   │   ├── sampler.h
+│   │   │   ├── solaris
+│   │   │   │   └── libstdc++.la
+│   │   │   ├── span.cc
+│   │   │   ├── span.h
+│   │   │   ├── stacktrace_arm-inl.h
+│   │   │   ├── stacktrace.cc
+│   │   │   ├── stacktrace_generic-inl.h
+│   │   │   ├── stacktrace_impl_setup-inl.h
+│   │   │   ├── stacktrace_instrument-inl.h
+│   │   │   ├── stacktrace_libgcc-inl.h
+│   │   │   ├── stacktrace_libunwind-inl.h
+│   │   │   ├── stacktrace_powerpc-darwin-inl.h
+│   │   │   ├── stacktrace_powerpc-inl.h
+│   │   │   ├── stacktrace_powerpc-linux-inl.h
+│   │   │   ├── stack_trace_table.cc
+│   │   │   ├── stack_trace_table.h
+│   │   │   ├── stacktrace_win32-inl.h
+│   │   │   ├── stacktrace_x86-inl.h
+│   │   │   ├── static_vars.cc
+│   │   │   ├── static_vars.h
+│   │   │   ├── symbolize.cc
+│   │   │   ├── symbolize.h
+│   │   │   ├── system-alloc.cc
+│   │   │   ├── system-alloc.h
+│   │   │   ├── tcmalloc.cc
+│   │   │   ├── tcmalloc_guard.h
+│   │   │   ├── tcmalloc.h
+│   │   │   ├── tests
+│   │   │   │   ├── addressmap_unittest.cc
+│   │   │   │   ├── atomicops_unittest.cc
+│   │   │   │   ├── current_allocated_bytes_test.cc
+│   │   │   │   ├── debugallocation_test.cc
+│   │   │   │   ├── debugallocation_test.sh
+│   │   │   │   ├── frag_unittest.cc
+│   │   │   │   ├── getpc_test.cc
+│   │   │   │   ├── heap-checker-death_unittest.sh
+│   │   │   │   ├── heap-checker_unittest.cc
+│   │   │   │   ├── heap-checker_unittest.sh
+│   │   │   │   ├── heap-profiler_unittest.cc
+│   │   │   │   ├── heap-profiler_unittest.sh
+│   │   │   │   ├── large_heap_fragmentation_unittest.cc
+│   │   │   │   ├── low_level_alloc_unittest.cc
+│   │   │   │   ├── malloc_extension_c_test.c
+│   │   │   │   ├── malloc_extension_test.cc
+│   │   │   │   ├── malloc_hook_test.cc
+│   │   │   │   ├── markidle_unittest.cc
+│   │   │   │   ├── maybe_threads_unittest.sh
+│   │   │   │   ├── memalign_unittest.cc
+│   │   │   │   ├── packed-cache_test.cc
+│   │   │   │   ├── page_heap_test.cc
+│   │   │   │   ├── pagemap_unittest.cc
+│   │   │   │   ├── profiledata_unittest.cc
+│   │   │   │   ├── profile-handler_unittest.cc
+│   │   │   │   ├── profiler_unittest.cc
+│   │   │   │   ├── profiler_unittest.sh
+│   │   │   │   ├── raw_printer_test.cc
+│   │   │   │   ├── realloc_unittest.cc
+│   │   │   │   ├── sampler_test.cc
+│   │   │   │   ├── sampling_test.cc
+│   │   │   │   ├── sampling_test.sh
+│   │   │   │   ├── simple_compat_test.cc
+│   │   │   │   ├── stack_trace_table_test.cc
+│   │   │   │   ├── stacktrace_unittest.cc
+│   │   │   │   ├── system-alloc_unittest.cc
+│   │   │   │   ├── tcmalloc_large_unittest.cc
+│   │   │   │   ├── tcmalloc_unittest.cc
+│   │   │   │   ├── tcmalloc_unittest.sh
+│   │   │   │   ├── testutil.cc
+│   │   │   │   ├── testutil.h
+│   │   │   │   └── thread_dealloc_unittest.cc
+│   │   │   ├── third_party
+│   │   │   │   └── valgrind.h
+│   │   │   ├── thread_cache.cc
+│   │   │   ├── thread_cache.h
+│   │   │   └── windows
+│   │   │       ├── addr2line-pdb.c
+│   │   │       ├── auto_testing_hook.h
+│   │   │       ├── config.h
+│   │   │       ├── get_mangled_names.cc
+│   │   │       ├── google
+│   │   │       │   └── tcmalloc.h
+│   │   │       ├── gperftools
+│   │   │       │   ├── tcmalloc.h
+│   │   │       │   └── tcmalloc.h.in
+│   │   │       ├── ia32_modrm_map.cc
+│   │   │       ├── ia32_opcode_map.cc
+│   │   │       ├── mingw.h
+│   │   │       ├── mini_disassembler.cc
+│   │   │       ├── mini_disassembler.h
+│   │   │       ├── mini_disassembler_types.h
+│   │   │       ├── nm-pdb.c
+│   │   │       ├── override_functions.cc
+│   │   │       ├── patch_functions.cc
+│   │   │       ├── port.cc
+│   │   │       ├── port.h
+│   │   │       ├── preamble_patcher.cc
+│   │   │       ├── preamble_patcher.h
+│   │   │       ├── preamble_patcher_test.cc
+│   │   │       ├── preamble_patcher_with_stub.cc
+│   │   │       ├── shortproc.asm
+│   │   │       ├── system-alloc.cc
+│   │   │       └── TODO
+│   │   ├── TODO
+│   │   └── vsprojects
+│   │       ├── addr2line-pdb
+│   │       │   └── addr2line-pdb.vcproj
+│   │       ├── addressmap_unittest
+│   │       │   └── addressmap_unittest.vcproj
+│   │       ├── current_allocated_bytes_test
+│   │       │   └── current_allocated_bytes_test.vcproj
+│   │       ├── frag_unittest
+│   │       │   └── frag_unittest.vcproj
+│   │       ├── libtcmalloc_minimal
+│   │       │   └── libtcmalloc_minimal.vcproj
+│   │       ├── low_level_alloc_unittest
+│   │       │   └── low_level_alloc_unittest.vcproj
+│   │       ├── malloc_extension_test
+│   │       │   └── malloc_extension_test.vcproj
+│   │       ├── malloc_hook_test
+│   │       │   └── malloc_hook_test.vcproj
+│   │       ├── markidle_unittest
+│   │       │   └── markidle_unittest.vcproj
+│   │       ├── nm-pdb
+│   │       │   └── nm-pdb.vcproj
+│   │       ├── packed-cache_test
+│   │       │   └── packed-cache_test.vcproj
+│   │       ├── page_heap_test
+│   │       │   └── page_heap_test.vcproj
+│   │       ├── pagemap_unittest
+│   │       │   └── pagemap_unittest.vcproj
+│   │       ├── preamble_patcher_test
+│   │       │   └── preamble_patcher_test.vcproj
+│   │       ├── realloc_unittest
+│   │       │   └── realloc_unittest.vcproj
+│   │       ├── sampler_test
+│   │       │   └── sampler_test.vcproj
+│   │       ├── stack_trace_table_test
+│   │       │   └── stack_trace_table_test.vcproj
+│   │       ├── system-alloc_unittest
+│   │       │   └── system-alloc_unittest.vcproj
+│   │       ├── tcmalloc_minimal_large
+│   │       │   └── tcmalloc_minimal_large_unittest.vcproj
+│   │       ├── tcmalloc_minimal_unittest
+│   │       │   └── tcmalloc_minimal_unittest.vcproj
+│   │       ├── thread_dealloc_unittest
+│   │       │   └── thread_dealloc_unittest.vcproj
+│   │       └── tmu-static
+│   │           └── tmu-static.vcproj
+│   ├── myfile
+│   │   ├── chinese-font.md
+│   │   ├── dotfile
+│   │   │   ├── custom.conf
+│   │   │   ├── dnf.conf
+│   │   │   ├── my-autostart.desktop
+│   │   │   └── MyConfig.pm
+│   │   ├── fedora-27
+│   │   │   ├── fedora-updates-ustc.repo
+│   │   │   ├── fedora-ustc.repo
+│   │   │   ├── install-define.sh
+│   │   │   └── install-fedora.sh
+│   │   ├── install-bak
+│   │   │   ├── install-acl.sh
+│   │   │   ├── install-ag.sh
+│   │   │   ├── install-autoconf.sh
+│   │   │   ├── install-gcc.sh
+│   │   │   ├── install-git.sh
+│   │   │   ├── install-glibc.sh
+│   │   │   ├── install-glib.sh
+│   │   │   ├── install-openbox.sh
+│   │   │   ├── install-perl.sh
+│   │   │   ├── install-stoptracker.sh
+│   │   │   ├── install-vim.sh
+│   │   │   └── install-x11.sh
+│   │   ├── install-define.sh
+│   │   ├── install.sh
+│   │   ├── install-sub
+│   │   │   ├── gr-cd.sh
+│   │   │   ├── gr-get.sh
+│   │   │   ├── install-ag.sh
+│   │   │   ├── install-define.sh
+│   │   │   ├── install-dnf.sh
+│   │   │   ├── install-fzf.sh
+│   │   │   ├── install-gdb.sh
+│   │   │   ├── install-git.sh
+│   │   │   ├── install-go.sh
+│   │   │   ├── install-gr.sh
+│   │   │   ├── install-openbox.sh
+│   │   │   ├── install-shared.sh
+│   │   │   ├── install-tmux.sh
+│   │   │   ├── install-vim.sh
+│   │   │   └── install-zsh.sh
+│   │   ├── predefine.log
+│   │   ├── README.md
+│   │   ├── redhat-7.4
+│   │   │   ├── CentOS7.4-Base.repo
+│   │   │   └── install.md
+│   │   ├── save-cpan.out
+│   │   ├── save-cpan.sh
+│   │   ├── save_github.out
+│   │   ├── save_github.sh
+│   │   ├── save_go.out
+│   │   ├── save_go.sh
+│   │   ├── save.sh
+│   │   ├── save-sub
+│   │   │   ├── save-cpan.out
+│   │   │   ├── save-dnf.out
+│   │   │   ├── save-github.out
+│   │   │   └── save-go.out
+│   │   ├── save_yum.out
+│   │   ├── save_yum.sh
+│   │   ├── url.md
+│   │   ├── websize.md
+│   │   └── yum.repos.d.tar
+│   └── space-vim
+│       ├── assets
+│       │   ├── license.svg
+│       │   └── space-vim-badge.svg
+│       ├── CHANGELOG.md
+│       ├── core
+│       │   ├── autoload
+│       │   │   ├── spacevim
+│       │   │   │   ├── cache.vim
+│       │   │   │   ├── defer.vim
+│       │   │   │   ├── info.vim
+│       │   │   │   ├── lang
+│       │   │   │   │   ├── go.vim
+│       │   │   │   │   ├── python.vim
+│       │   │   │   │   └── rust.vim
+│       │   │   │   ├── layer.vim
+│       │   │   │   ├── plug
+│       │   │   │   │   ├── ale.vim
+│       │   │   │   │   ├── asyncrun.vim
+│       │   │   │   │   ├── fzf.vim
+│       │   │   │   │   ├── latex.vim
+│       │   │   │   │   ├── markdown.vim
+│       │   │   │   │   ├── nerdtree.vim
+│       │   │   │   │   ├── startify.vim
+│       │   │   │   │   └── unite.vim
+│       │   │   │   ├── util.vim
+│       │   │   │   └── vim
+│       │   │   │       ├── auto.vim
+│       │   │   │       ├── gui.vim
+│       │   │   │       └── tab.vim
+│       │   │   └── spacevim.vim
+│       │   ├── ftdetect
+│       │   │   └── spacevim.vim
+│       │   └── ftplugin
+│       │       ├── cpp.vim
+│       │       ├── css.vim
+│       │       ├── c.vim
+│       │       ├── dot.vim
+│       │       ├── go.vim
+│       │       ├── help.vim
+│       │       ├── html.vim
+│       │       ├── javascript.vim
+│       │       ├── java.vim
+│       │       ├── markdown.vim
+│       │       ├── php.vim
+│       │       ├── python.vim
+│       │       ├── qf.vim
+│       │       ├── rust.vim
+│       │       ├── sh.vim
+│       │       ├── tex.vim
+│       │       ├── vim.vim
+│       │       └── vue.vim
+│       ├── init.spacevim
+│       ├── init.vim
+│       ├── install.cmd
+│       ├── install.sh
+│       ├── layers
+│       │   ├── +checkers
+│       │   │   └── syntax-checking
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── +completion
+│       │   │   ├── auto-completion
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── deoplete
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── unite
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── +distributions
+│       │   │   ├── better-defaults
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── keybindings.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── spacevim
+│       │   │       ├── config.vim
+│       │   │       └── packages.vim
+│       │   ├── +fun
+│       │   │   ├── emoji
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── games
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── goyo
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── generate_layers.py
+│       │   ├── +lang
+│       │   │   ├── c-c++
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── clojure
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── elixir
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── elm
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── erlang
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── go
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── graphviz
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── html
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── java
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── javascript
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── latex
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── markdown
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── python
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── ruby
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── rust
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── scala
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── solidity
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── typescript
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── vue
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── LAYERS.md
+│       │   ├── +misc
+│       │   │   └── chinese
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── +programming
+│       │   │   ├── code-snippets
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── editing
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── programming
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── +themes
+│       │   │   ├── airline
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── lightline
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── +tools
+│       │   │   ├── docker
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── file-manager
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── fzf
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   ├── tmux
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── ycmd
+│       │   │       ├── config.vim
+│       │   │       ├── global_conf.py
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   ├── +version-control
+│       │   │   ├── git
+│       │   │   │   ├── config.vim
+│       │   │   │   ├── packages.vim
+│       │   │   │   └── README.md
+│       │   │   └── github
+│       │   │       ├── config.vim
+│       │   │       ├── packages.vim
+│       │   │       └── README.md
+│       │   └── +vim
+│       │       ├── better-motion
+│       │       │   ├── config.vim
+│       │       │   ├── packages.vim
+│       │       │   └── README.md
+│       │       ├── ctrlp
+│       │       │   ├── config.vim
+│       │       │   ├── packages.vim
+│       │       │   └── README.md
+│       │       └── text-align
+│       │           ├── config.vim
+│       │           ├── packages.vim
+│       │           └── README.md
+│       ├── LICENSE
+│       ├── Makefile
+│       ├── private
+│       │   └── README.md
+│       ├── README.md
+│       └── uninstall.sh
+└── golang
+    ├── crypto.git
+    │   ├── acme
+    │   │   ├── acme.go
+    │   │   ├── acme_test.go
+    │   │   ├── autocert
+    │   │   │   ├── autocert.go
+    │   │   │   ├── autocert_test.go
+    │   │   │   ├── cache.go
+    │   │   │   ├── cache_test.go
+    │   │   │   ├── example_test.go
+    │   │   │   ├── listener.go
+    │   │   │   ├── renewal.go
+    │   │   │   └── renewal_test.go
+    │   │   ├── jws.go
+    │   │   ├── jws_test.go
+    │   │   ├── types.go
+    │   │   └── types_test.go
+    │   ├── argon2
+    │   │   ├── argon2.go
+    │   │   ├── argon2_test.go
+    │   │   ├── blake2b.go
+    │   │   ├── blamka_amd64.go
+    │   │   ├── blamka_amd64.s
+    │   │   ├── blamka_generic.go
+    │   │   └── blamka_ref.go
+    │   ├── AUTHORS
+    │   ├── bcrypt
+    │   │   ├── base64.go
+    │   │   ├── bcrypt.go
+    │   │   └── bcrypt_test.go
+    │   ├── blake2b
+    │   │   ├── blake2b_amd64.go
+    │   │   ├── blake2b_amd64.s
+    │   │   ├── blake2bAVX2_amd64.go
+    │   │   ├── blake2bAVX2_amd64.s
+    │   │   ├── blake2b_generic.go
+    │   │   ├── blake2b.go
+    │   │   ├── blake2b_ref.go
+    │   │   ├── blake2b_test.go
+    │   │   ├── blake2x.go
+    │   │   └── register.go
+    │   ├── blake2s
+    │   │   ├── blake2s_386.go
+    │   │   ├── blake2s_386.s
+    │   │   ├── blake2s_amd64.go
+    │   │   ├── blake2s_amd64.s
+    │   │   ├── blake2s_generic.go
+    │   │   ├── blake2s.go
+    │   │   ├── blake2s_ref.go
+    │   │   ├── blake2s_test.go
+    │   │   ├── blake2x.go
+    │   │   └── register.go
+    │   ├── blowfish
+    │   │   ├── block.go
+    │   │   ├── blowfish_test.go
+    │   │   ├── cipher.go
+    │   │   └── const.go
+    │   ├── bn256
+    │   │   ├── bn256.go
+    │   │   ├── bn256_test.go
+    │   │   ├── constants.go
+    │   │   ├── curve.go
+    │   │   ├── example_test.go
+    │   │   ├── gfp12.go
+    │   │   ├── gfp2.go
+    │   │   ├── gfp6.go
+    │   │   ├── optate.go
+    │   │   └── twist.go
+    │   ├── cast5
+    │   │   ├── cast5.go
+    │   │   └── cast5_test.go
+    │   ├── chacha20poly1305
+    │   │   ├── chacha20poly1305_amd64.go
+    │   │   ├── chacha20poly1305_amd64.s
+    │   │   ├── chacha20poly1305_generic.go
+    │   │   ├── chacha20poly1305.go
+    │   │   ├── chacha20poly1305_noasm.go
+    │   │   ├── chacha20poly1305_test.go
+    │   │   └── chacha20poly1305_vectors_test.go
+    │   ├── codereview.cfg
+    │   ├── CONTRIBUTING.md
+    │   ├── CONTRIBUTORS
+    │   ├── cryptobyte
+    │   │   ├── asn1
+    │   │   │   └── asn1.go
+    │   │   ├── asn1.go
+    │   │   ├── asn1_test.go
+    │   │   ├── builder.go
+    │   │   ├── cryptobyte_test.go
+    │   │   ├── example_test.go
+    │   │   └── string.go
+    │   ├── curve25519
+    │   │   ├── const_amd64.h
+    │   │   ├── const_amd64.s
+    │   │   ├── cswap_amd64.s
+    │   │   ├── curve25519.go
+    │   │   ├── curve25519_test.go
+    │   │   ├── doc.go
+    │   │   ├── freeze_amd64.s
+    │   │   ├── ladderstep_amd64.s
+    │   │   ├── mont25519_amd64.go
+    │   │   ├── mul_amd64.s
+    │   │   └── square_amd64.s
+    │   ├── ed25519
+    │   │   ├── ed25519.go
+    │   │   ├── ed25519_test.go
+    │   │   ├── internal
+    │   │   │   └── edwards25519
+    │   │   │       ├── const.go
+    │   │   │       └── edwards25519.go
+    │   │   └── testdata
+    │   │       └── sign.input.gz
+    │   ├── hkdf
+    │   │   ├── example_test.go
+    │   │   ├── hkdf.go
+    │   │   └── hkdf_test.go
+    │   ├── internal
+    │   │   └── chacha20
+    │   │       ├── chacha_generic.go
+    │   │       └── chacha_test.go
+    │   ├── LICENSE
+    │   ├── md4
+    │   │   ├── example_test.go
+    │   │   ├── md4block.go
+    │   │   ├── md4.go
+    │   │   └── md4_test.go
+    │   ├── nacl
+    │   │   ├── auth
+    │   │   │   ├── auth.go
+    │   │   │   ├── auth_test.go
+    │   │   │   └── example_test.go
+    │   │   ├── box
+    │   │   │   ├── box.go
+    │   │   │   ├── box_test.go
+    │   │   │   └── example_test.go
+    │   │   ├── secretbox
+    │   │   │   ├── example_test.go
+    │   │   │   ├── secretbox.go
+    │   │   │   └── secretbox_test.go
+    │   │   └── sign
+    │   │       ├── sign.go
+    │   │       └── sign_test.go
+    │   ├── ocsp
+    │   │   ├── ocsp.go
+    │   │   └── ocsp_test.go
+    │   ├── openpgp
+    │   │   ├── armor
+    │   │   │   ├── armor.go
+    │   │   │   ├── armor_test.go
+    │   │   │   └── encode.go
+    │   │   ├── canonical_text.go
+    │   │   ├── canonical_text_test.go
+    │   │   ├── clearsign
+    │   │   │   ├── clearsign.go
+    │   │   │   └── clearsign_test.go
+    │   │   ├── elgamal
+    │   │   │   ├── elgamal.go
+    │   │   │   └── elgamal_test.go
+    │   │   ├── errors
+    │   │   │   └── errors.go
+    │   │   ├── keys.go
+    │   │   ├── keys_test.go
+    │   │   ├── packet
+    │   │   │   ├── compressed.go
+    │   │   │   ├── compressed_test.go
+    │   │   │   ├── config.go
+    │   │   │   ├── encrypted_key.go
+    │   │   │   ├── encrypted_key_test.go
+    │   │   │   ├── literal.go
+    │   │   │   ├── ocfb.go
+    │   │   │   ├── ocfb_test.go
+    │   │   │   ├── one_pass_signature.go
+    │   │   │   ├── opaque.go
+    │   │   │   ├── opaque_test.go
+    │   │   │   ├── packet.go
+    │   │   │   ├── packet_test.go
+    │   │   │   ├── private_key.go
+    │   │   │   ├── private_key_test.go
+    │   │   │   ├── public_key.go
+    │   │   │   ├── public_key_test.go
+    │   │   │   ├── public_key_v3.go
+    │   │   │   ├── public_key_v3_test.go
+    │   │   │   ├── reader.go
+    │   │   │   ├── signature.go
+    │   │   │   ├── signature_test.go
+    │   │   │   ├── signature_v3.go
+    │   │   │   ├── signature_v3_test.go
+    │   │   │   ├── symmetrically_encrypted.go
+    │   │   │   ├── symmetrically_encrypted_test.go
+    │   │   │   ├── symmetric_key_encrypted.go
+    │   │   │   ├── symmetric_key_encrypted_test.go
+    │   │   │   ├── userattribute.go
+    │   │   │   ├── userattribute_test.go
+    │   │   │   ├── userid.go
+    │   │   │   └── userid_test.go
+    │   │   ├── read.go
+    │   │   ├── read_test.go
+    │   │   ├── s2k
+    │   │   │   ├── s2k.go
+    │   │   │   └── s2k_test.go
+    │   │   ├── write.go
+    │   │   └── write_test.go
+    │   ├── otr
+    │   │   ├── libotr_test_helper.c
+    │   │   ├── otr.go
+    │   │   ├── otr_test.go
+    │   │   └── smp.go
+    │   ├── PATENTS
+    │   ├── pbkdf2
+    │   │   ├── pbkdf2.go
+    │   │   └── pbkdf2_test.go
+    │   ├── pkcs12
+    │   │   ├── bmp-string.go
+    │   │   ├── bmp-string_test.go
+    │   │   ├── crypto.go
+    │   │   ├── crypto_test.go
+    │   │   ├── errors.go
+    │   │   ├── internal
+    │   │   │   └── rc2
+    │   │   │       ├── bench_test.go
+    │   │   │       ├── rc2.go
+    │   │   │       └── rc2_test.go
+    │   │   ├── mac.go
+    │   │   ├── mac_test.go
+    │   │   ├── pbkdf.go
+    │   │   ├── pbkdf_test.go
+    │   │   ├── pkcs12.go
+    │   │   ├── pkcs12_test.go
+    │   │   └── safebags.go
+    │   ├── poly1305
+    │   │   ├── poly1305.go
+    │   │   ├── poly1305_test.go
+    │   │   ├── sum_amd64.go
+    │   │   ├── sum_amd64.s
+    │   │   ├── sum_arm.go
+    │   │   ├── sum_arm.s
+    │   │   └── sum_ref.go
+    │   ├── README.md
+    │   ├── ripemd160
+    │   │   ├── ripemd160block.go
+    │   │   ├── ripemd160.go
+    │   │   └── ripemd160_test.go
+    │   ├── salsa20
+    │   │   ├── salsa
+    │   │   │   ├── hsalsa20.go
+    │   │   │   ├── salsa2020_amd64.s
+    │   │   │   ├── salsa208.go
+    │   │   │   ├── salsa20_amd64.go
+    │   │   │   ├── salsa20_ref.go
+    │   │   │   └── salsa_test.go
+    │   │   ├── salsa20.go
+    │   │   └── salsa20_test.go
+    │   ├── scrypt
+    │   │   ├── example_test.go
+    │   │   ├── scrypt.go
+    │   │   └── scrypt_test.go
+    │   ├── sha3
+    │   │   ├── doc.go
+    │   │   ├── hashes.go
+    │   │   ├── keccakf_amd64.go
+    │   │   ├── keccakf_amd64.s
+    │   │   ├── keccakf.go
+    │   │   ├── register.go
+    │   │   ├── sha3.go
+    │   │   ├── sha3_test.go
+    │   │   ├── shake.go
+    │   │   ├── testdata
+    │   │   │   └── keccakKats.json.deflate
+    │   │   ├── xor_generic.go
+    │   │   ├── xor.go
+    │   │   └── xor_unaligned.go
+    │   ├── ssh
+    │   │   ├── agent
+    │   │   │   ├── client.go
+    │   │   │   ├── client_test.go
+    │   │   │   ├── example_test.go
+    │   │   │   ├── forward.go
+    │   │   │   ├── keyring.go
+    │   │   │   ├── keyring_test.go
+    │   │   │   ├── server.go
+    │   │   │   ├── server_test.go
+    │   │   │   └── testdata_test.go
+    │   │   ├── benchmark_test.go
+    │   │   ├── buffer.go
+    │   │   ├── buffer_test.go
+    │   │   ├── certs.go
+    │   │   ├── certs_test.go
+    │   │   ├── channel.go
+    │   │   ├── cipher.go
+    │   │   ├── cipher_test.go
+    │   │   ├── client_auth.go
+    │   │   ├── client_auth_test.go
+    │   │   ├── client.go
+    │   │   ├── client_test.go
+    │   │   ├── common.go
+    │   │   ├── connection.go
+    │   │   ├── doc.go
+    │   │   ├── example_test.go
+    │   │   ├── handshake.go
+    │   │   ├── handshake_test.go
+    │   │   ├── kex.go
+    │   │   ├── kex_test.go
+    │   │   ├── keys.go
+    │   │   ├── keys_test.go
+    │   │   ├── knownhosts
+    │   │   │   ├── knownhosts.go
+    │   │   │   └── knownhosts_test.go
+    │   │   ├── mac.go
+    │   │   ├── mempipe_test.go
+    │   │   ├── messages.go
+    │   │   ├── messages_test.go
+    │   │   ├── mux.go
+    │   │   ├── mux_test.go
+    │   │   ├── server.go
+    │   │   ├── session.go
+    │   │   ├── session_test.go
+    │   │   ├── streamlocal.go
+    │   │   ├── tcpip.go
+    │   │   ├── tcpip_test.go
+    │   │   ├── terminal
+    │   │   │   ├── terminal.go
+    │   │   │   ├── terminal_test.go
+    │   │   │   ├── util_bsd.go
+    │   │   │   ├── util.go
+    │   │   │   ├── util_linux.go
+    │   │   │   ├── util_plan9.go
+    │   │   │   ├── util_solaris.go
+    │   │   │   └── util_windows.go
+    │   │   ├── test
+    │   │   │   ├── agent_unix_test.go
+    │   │   │   ├── banner_test.go
+    │   │   │   ├── cert_test.go
+    │   │   │   ├── dial_unix_test.go
+    │   │   │   ├── doc.go
+    │   │   │   ├── forward_unix_test.go
+    │   │   │   ├── multi_auth_test.go
+    │   │   │   ├── session_test.go
+    │   │   │   ├── sshd_test_pw.c
+    │   │   │   ├── testdata_test.go
+    │   │   │   └── test_unix_test.go
+    │   │   ├── testdata
+    │   │   │   ├── doc.go
+    │   │   │   └── keys.go
+    │   │   ├── testdata_test.go
+    │   │   ├── transport.go
+    │   │   └── transport_test.go
+    │   ├── tea
+    │   │   ├── cipher.go
+    │   │   └── tea_test.go
+    │   ├── twofish
+    │   │   ├── twofish.go
+    │   │   └── twofish_test.go
+    │   ├── xtea
+    │   │   ├── block.go
+    │   │   ├── cipher.go
+    │   │   └── xtea_test.go
+    │   └── xts
+    │       ├── xts.go
+    │       └── xts_test.go
+    ├── net.git
+    │   ├── AUTHORS
+    │   ├── bpf
+    │   │   ├── asm.go
+    │   │   ├── constants.go
+    │   │   ├── doc.go
+    │   │   ├── instructions.go
+    │   │   ├── instructions_test.go
+    │   │   ├── setter.go
+    │   │   ├── testdata
+    │   │   │   ├── all_instructions.bpf
+    │   │   │   └── all_instructions.txt
+    │   │   ├── vm_aluop_test.go
+    │   │   ├── vm_bpf_test.go
+    │   │   ├── vm_extension_test.go
+    │   │   ├── vm.go
+    │   │   ├── vm_instructions.go
+    │   │   ├── vm_jump_test.go
+    │   │   ├── vm_load_test.go
+    │   │   ├── vm_ret_test.go
+    │   │   ├── vm_scratch_test.go
+    │   │   └── vm_test.go
+    │   ├── codereview.cfg
+    │   ├── context
+    │   │   ├── context.go
+    │   │   ├── context_test.go
+    │   │   ├── ctxhttp
+    │   │   │   ├── ctxhttp_17_test.go
+    │   │   │   ├── ctxhttp.go
+    │   │   │   ├── ctxhttp_pre17.go
+    │   │   │   ├── ctxhttp_pre17_test.go
+    │   │   │   └── ctxhttp_test.go
+    │   │   ├── go17.go
+    │   │   ├── go19.go
+    │   │   ├── pre_go17.go
+    │   │   ├── pre_go19.go
+    │   │   └── withtimeout_test.go
+    │   ├── CONTRIBUTING.md
+    │   ├── CONTRIBUTORS
+    │   ├── dict
+    │   │   └── dict.go
+    │   ├── dns
+    │   │   └── dnsmessage
+    │   │       ├── example_test.go
+    │   │       ├── message.go
+    │   │       └── message_test.go
+    │   ├── html
+    │   │   ├── atom
+    │   │   │   ├── atom.go
+    │   │   │   ├── atom_test.go
+    │   │   │   ├── gen.go
+    │   │   │   ├── table.go
+    │   │   │   └── table_test.go
+    │   │   ├── charset
+    │   │   │   ├── charset.go
+    │   │   │   ├── charset_test.go
+    │   │   │   └── testdata
+    │   │   │       ├── HTTP-charset.html
+    │   │   │       ├── HTTP-vs-meta-charset.html
+    │   │   │       ├── HTTP-vs-meta-content.html
+    │   │   │       ├── HTTP-vs-UTF-8-BOM.html
+    │   │   │       ├── meta-charset-attribute.html
+    │   │   │       ├── meta-content-attribute.html
+    │   │   │       ├── No-encoding-declaration.html
+    │   │   │       ├── README
+    │   │   │       ├── UTF-16BE-BOM.html
+    │   │   │       ├── UTF-16LE-BOM.html
+    │   │   │       ├── UTF-8-BOM-vs-meta-charset.html
+    │   │   │       └── UTF-8-BOM-vs-meta-content.html
+    │   │   ├── const.go
+    │   │   ├── doc.go
+    │   │   ├── doctype.go
+    │   │   ├── entity.go
+    │   │   ├── entity_test.go
+    │   │   ├── escape.go
+    │   │   ├── escape_test.go
+    │   │   ├── example_test.go
+    │   │   ├── foreign.go
+    │   │   ├── node.go
+    │   │   ├── node_test.go
+    │   │   ├── parse.go
+    │   │   ├── parse_test.go
+    │   │   ├── render.go
+    │   │   ├── render_test.go
+    │   │   ├── testdata
+    │   │   │   ├── go1.html
+    │   │   │   └── webkit
+    │   │   │       ├── adoption01.dat
+    │   │   │       ├── adoption02.dat
+    │   │   │       ├── comments01.dat
+    │   │   │       ├── doctype01.dat
+    │   │   │       ├── entities01.dat
+    │   │   │       ├── entities02.dat
+    │   │   │       ├── html5test-com.dat
+    │   │   │       ├── inbody01.dat
+    │   │   │       ├── isindex.dat
+    │   │   │       ├── pending-spec-changes.dat
+    │   │   │       ├── pending-spec-changes-plain-text-unsafe.dat
+    │   │   │       ├── plain-text-unsafe.dat
+    │   │   │       ├── README
+    │   │   │       ├── scriptdata01.dat
+    │   │   │       ├── scripted
+    │   │   │       │   ├── adoption01.dat
+    │   │   │       │   └── webkit01.dat
+    │   │   │       ├── tables01.dat
+    │   │   │       ├── template.dat
+    │   │   │       ├── tests10.dat
+    │   │   │       ├── tests11.dat
+    │   │   │       ├── tests12.dat
+    │   │   │       ├── tests14.dat
+    │   │   │       ├── tests15.dat
+    │   │   │       ├── tests16.dat
+    │   │   │       ├── tests17.dat
+    │   │   │       ├── tests18.dat
+    │   │   │       ├── tests19.dat
+    │   │   │       ├── tests1.dat
+    │   │   │       ├── tests20.dat
+    │   │   │       ├── tests21.dat
+    │   │   │       ├── tests22.dat
+    │   │   │       ├── tests23.dat
+    │   │   │       ├── tests24.dat
+    │   │   │       ├── tests25.dat
+    │   │   │       ├── tests26.dat
+    │   │   │       ├── tests2.dat
+    │   │   │       ├── tests3.dat
+    │   │   │       ├── tests4.dat
+    │   │   │       ├── tests5.dat
+    │   │   │       ├── tests6.dat
+    │   │   │       ├── tests7.dat
+    │   │   │       ├── tests8.dat
+    │   │   │       ├── tests9.dat
+    │   │   │       ├── tests_innerHTML_1.dat
+    │   │   │       ├── tricky01.dat
+    │   │   │       ├── webkit01.dat
+    │   │   │       └── webkit02.dat
+    │   │   ├── token.go
+    │   │   └── token_test.go
+    │   ├── http
+    │   │   └── httpproxy
+    │   │       ├── export_test.go
+    │   │       ├── go19_test.go
+    │   │       ├── proxy.go
+    │   │       └── proxy_test.go
+    │   ├── http2
+    │   │   ├── ciphers.go
+    │   │   ├── ciphers_test.go
+    │   │   ├── client_conn_pool.go
+    │   │   ├── configure_transport.go
+    │   │   ├── databuffer.go
+    │   │   ├── databuffer_test.go
+    │   │   ├── Dockerfile
+    │   │   ├── errors.go
+    │   │   ├── errors_test.go
+    │   │   ├── flow.go
+    │   │   ├── flow_test.go
+    │   │   ├── frame.go
+    │   │   ├── frame_test.go
+    │   │   ├── go16.go
+    │   │   ├── go17.go
+    │   │   ├── go17_not18.go
+    │   │   ├── go18.go
+    │   │   ├── go18_test.go
+    │   │   ├── go19.go
+    │   │   ├── go19_test.go
+    │   │   ├── gotrack.go
+    │   │   ├── gotrack_test.go
+    │   │   ├── h2demo
+    │   │   │   ├── deployment-prod.yaml
+    │   │   │   ├── Dockerfile
+    │   │   │   ├── Dockerfile.0
+    │   │   │   ├── h2demo.go
+    │   │   │   ├── launch.go
+    │   │   │   ├── Makefile
+    │   │   │   ├── README
+    │   │   │   ├── rootCA.key
+    │   │   │   ├── rootCA.pem
+    │   │   │   ├── rootCA.srl
+    │   │   │   ├── server.crt
+    │   │   │   ├── server.key
+    │   │   │   ├── service.yaml
+    │   │   │   └── tmpl.go
+    │   │   ├── h2i
+    │   │   │   ├── h2i.go
+    │   │   │   └── README.md
+    │   │   ├── headermap.go
+    │   │   ├── hpack
+    │   │   │   ├── encode.go
+    │   │   │   ├── encode_test.go
+    │   │   │   ├── hpack.go
+    │   │   │   ├── hpack_test.go
+    │   │   │   ├── huffman.go
+    │   │   │   ├── tables.go
+    │   │   │   └── tables_test.go
+    │   │   ├── http2.go
+    │   │   ├── http2_test.go
+    │   │   ├── Makefile
+    │   │   ├── not_go16.go
+    │   │   ├── not_go17.go
+    │   │   ├── not_go18.go
+    │   │   ├── not_go19.go
+    │   │   ├── pipe.go
+    │   │   ├── pipe_test.go
+    │   │   ├── README
+    │   │   ├── server.go
+    │   │   ├── server_push_test.go
+    │   │   ├── server_test.go
+    │   │   ├── testdata
+    │   │   │   └── draft-ietf-httpbis-http2.xml
+    │   │   ├── transport.go
+    │   │   ├── transport_test.go
+    │   │   ├── write.go
+    │   │   ├── writesched.go
+    │   │   ├── writesched_priority.go
+    │   │   ├── writesched_priority_test.go
+    │   │   ├── writesched_random.go
+    │   │   ├── writesched_random_test.go
+    │   │   ├── writesched_test.go
+    │   │   └── z_spec_test.go
+    │   ├── icmp
+    │   │   ├── diag_test.go
+    │   │   ├── dstunreach.go
+    │   │   ├── echo.go
+    │   │   ├── endpoint.go
+    │   │   ├── example_test.go
+    │   │   ├── extension.go
+    │   │   ├── extension_test.go
+    │   │   ├── helper_posix.go
+    │   │   ├── interface.go
+    │   │   ├── ipv4.go
+    │   │   ├── ipv4_test.go
+    │   │   ├── ipv6.go
+    │   │   ├── listen_posix.go
+    │   │   ├── listen_stub.go
+    │   │   ├── messagebody.go
+    │   │   ├── message.go
+    │   │   ├── message_test.go
+    │   │   ├── mpls.go
+    │   │   ├── multipart.go
+    │   │   ├── multipart_test.go
+    │   │   ├── packettoobig.go
+    │   │   ├── paramprob.go
+    │   │   ├── sys_freebsd.go
+    │   │   └── timeexceeded.go
+    │   ├── idna
+    │   │   ├── example_test.go
+    │   │   ├── idna.go
+    │   │   ├── idna_test.go
+    │   │   ├── punycode.go
+    │   │   ├── punycode_test.go
+    │   │   ├── tables.go
+    │   │   ├── trie.go
+    │   │   └── trieval.go
+    │   ├── internal
+    │   │   ├── iana
+    │   │   │   ├── const.go
+    │   │   │   └── gen.go
+    │   │   ├── nettest
+    │   │   │   ├── helper_bsd.go
+    │   │   │   ├── helper_nobsd.go
+    │   │   │   ├── helper_posix.go
+    │   │   │   ├── helper_stub.go
+    │   │   │   ├── helper_unix.go
+    │   │   │   ├── helper_windows.go
+    │   │   │   ├── interface.go
+    │   │   │   ├── rlimit.go
+    │   │   │   └── stack.go
+    │   │   ├── socket
+    │   │   │   ├── cmsghdr_bsd.go
+    │   │   │   ├── cmsghdr.go
+    │   │   │   ├── cmsghdr_linux_32bit.go
+    │   │   │   ├── cmsghdr_linux_64bit.go
+    │   │   │   ├── cmsghdr_solaris_64bit.go
+    │   │   │   ├── cmsghdr_stub.go
+    │   │   │   ├── defs_darwin.go
+    │   │   │   ├── defs_dragonfly.go
+    │   │   │   ├── defs_freebsd.go
+    │   │   │   ├── defs_linux.go
+    │   │   │   ├── defs_netbsd.go
+    │   │   │   ├── defs_openbsd.go
+    │   │   │   ├── defs_solaris.go
+    │   │   │   ├── error_unix.go
+    │   │   │   ├── error_windows.go
+    │   │   │   ├── iovec_32bit.go
+    │   │   │   ├── iovec_64bit.go
+    │   │   │   ├── iovec_solaris_64bit.go
+    │   │   │   ├── iovec_stub.go
+    │   │   │   ├── mmsghdr_stub.go
+    │   │   │   ├── mmsghdr_unix.go
+    │   │   │   ├── msghdr_bsd.go
+    │   │   │   ├── msghdr_bsdvar.go
+    │   │   │   ├── msghdr_linux_32bit.go
+    │   │   │   ├── msghdr_linux_64bit.go
+    │   │   │   ├── msghdr_linux.go
+    │   │   │   ├── msghdr_openbsd.go
+    │   │   │   ├── msghdr_solaris_64bit.go
+    │   │   │   ├── msghdr_stub.go
+    │   │   │   ├── rawconn.go
+    │   │   │   ├── rawconn_mmsg.go
+    │   │   │   ├── rawconn_msg.go
+    │   │   │   ├── rawconn_nommsg.go
+    │   │   │   ├── rawconn_nomsg.go
+    │   │   │   ├── rawconn_stub.go
+    │   │   │   ├── reflect.go
+    │   │   │   ├── socket.go
+    │   │   │   ├── socket_go1_9_test.go
+    │   │   │   ├── socket_test.go
+    │   │   │   ├── sys_bsd.go
+    │   │   │   ├── sys_bsdvar.go
+    │   │   │   ├── sys_darwin.go
+    │   │   │   ├── sys_dragonfly.go
+    │   │   │   ├── sys.go
+    │   │   │   ├── sys_linux_386.go
+    │   │   │   ├── sys_linux_386.s
+    │   │   │   ├── sys_linux_amd64.go
+    │   │   │   ├── sys_linux_arm64.go
+    │   │   │   ├── sys_linux_arm.go
+    │   │   │   ├── sys_linux.go
+    │   │   │   ├── sys_linux_mips64.go
+    │   │   │   ├── sys_linux_mips64le.go
+    │   │   │   ├── sys_linux_mips.go
+    │   │   │   ├── sys_linux_mipsle.go
+    │   │   │   ├── sys_linux_ppc64.go
+    │   │   │   ├── sys_linux_ppc64le.go
+    │   │   │   ├── sys_linux_s390x.go
+    │   │   │   ├── sys_linux_s390x.s
+    │   │   │   ├── sys_netbsd.go
+    │   │   │   ├── sys_posix.go
+    │   │   │   ├── sys_solaris_amd64.s
+    │   │   │   ├── sys_solaris.go
+    │   │   │   ├── sys_stub.go
+    │   │   │   ├── sys_unix.go
+    │   │   │   ├── sys_windows.go
+    │   │   │   ├── zsys_darwin_386.go
+    │   │   │   ├── zsys_darwin_amd64.go
+    │   │   │   ├── zsys_darwin_arm64.go
+    │   │   │   ├── zsys_darwin_arm.go
+    │   │   │   ├── zsys_dragonfly_amd64.go
+    │   │   │   ├── zsys_freebsd_386.go
+    │   │   │   ├── zsys_freebsd_amd64.go
+    │   │   │   ├── zsys_freebsd_arm.go
+    │   │   │   ├── zsys_linux_386.go
+    │   │   │   ├── zsys_linux_amd64.go
+    │   │   │   ├── zsys_linux_arm64.go
+    │   │   │   ├── zsys_linux_arm.go
+    │   │   │   ├── zsys_linux_mips64.go
+    │   │   │   ├── zsys_linux_mips64le.go
+    │   │   │   ├── zsys_linux_mips.go
+    │   │   │   ├── zsys_linux_mipsle.go
+    │   │   │   ├── zsys_linux_ppc64.go
+    │   │   │   ├── zsys_linux_ppc64le.go
+    │   │   │   ├── zsys_linux_s390x.go
+    │   │   │   ├── zsys_netbsd_386.go
+    │   │   │   ├── zsys_netbsd_amd64.go
+    │   │   │   ├── zsys_netbsd_arm.go
+    │   │   │   ├── zsys_openbsd_386.go
+    │   │   │   ├── zsys_openbsd_amd64.go
+    │   │   │   ├── zsys_openbsd_arm.go
+    │   │   │   └── zsys_solaris_amd64.go
+    │   │   ├── socks
+    │   │   │   ├── client.go
+    │   │   │   ├── dial_test.go
+    │   │   │   └── socks.go
+    │   │   ├── sockstest
+    │   │   │   ├── server.go
+    │   │   │   └── server_test.go
+    │   │   └── timeseries
+    │   │       ├── timeseries.go
+    │   │       └── timeseries_test.go
+    │   ├── ipv4
+    │   │   ├── batch.go
+    │   │   ├── bpf_test.go
+    │   │   ├── control_bsd.go
+    │   │   ├── control.go
+    │   │   ├── control_pktinfo.go
+    │   │   ├── control_stub.go
+    │   │   ├── control_test.go
+    │   │   ├── control_unix.go
+    │   │   ├── control_windows.go
+    │   │   ├── defs_darwin.go
+    │   │   ├── defs_dragonfly.go
+    │   │   ├── defs_freebsd.go
+    │   │   ├── defs_linux.go
+    │   │   ├── defs_netbsd.go
+    │   │   ├── defs_openbsd.go
+    │   │   ├── defs_solaris.go
+    │   │   ├── dgramopt.go
+    │   │   ├── doc.go
+    │   │   ├── endpoint.go
+    │   │   ├── example_test.go
+    │   │   ├── genericopt.go
+    │   │   ├── gen.go
+    │   │   ├── header.go
+    │   │   ├── header_test.go
+    │   │   ├── helper.go
+    │   │   ├── iana.go
+    │   │   ├── icmp.go
+    │   │   ├── icmp_linux.go
+    │   │   ├── icmp_stub.go
+    │   │   ├── icmp_test.go
+    │   │   ├── multicastlistener_test.go
+    │   │   ├── multicastsockopt_test.go
+    │   │   ├── multicast_test.go
+    │   │   ├── packet.go
+    │   │   ├── packet_go1_8.go
+    │   │   ├── packet_go1_9.go
+    │   │   ├── payload_cmsg.go
+    │   │   ├── payload_cmsg_go1_8.go
+    │   │   ├── payload_cmsg_go1_9.go
+    │   │   ├── payload.go
+    │   │   ├── payload_nocmsg.go
+    │   │   ├── readwrite_go1_8_test.go
+    │   │   ├── readwrite_go1_9_test.go
+    │   │   ├── readwrite_test.go
+    │   │   ├── sockopt.go
+    │   │   ├── sockopt_posix.go
+    │   │   ├── sockopt_stub.go
+    │   │   ├── sys_asmreq.go
+    │   │   ├── sys_asmreqn.go
+    │   │   ├── sys_asmreqn_stub.go
+    │   │   ├── sys_asmreq_stub.go
+    │   │   ├── sys_bpf.go
+    │   │   ├── sys_bpf_stub.go
+    │   │   ├── sys_bsd.go
+    │   │   ├── sys_darwin.go
+    │   │   ├── sys_dragonfly.go
+    │   │   ├── sys_freebsd.go
+    │   │   ├── sys_linux.go
+    │   │   ├── sys_solaris.go
+    │   │   ├── sys_ssmreq.go
+    │   │   ├── sys_ssmreq_stub.go
+    │   │   ├── sys_stub.go
+    │   │   ├── sys_windows.go
+    │   │   ├── unicastsockopt_test.go
+    │   │   ├── unicast_test.go
+    │   │   ├── zsys_darwin.go
+    │   │   ├── zsys_dragonfly.go
+    │   │   ├── zsys_freebsd_386.go
+    │   │   ├── zsys_freebsd_amd64.go
+    │   │   ├── zsys_freebsd_arm.go
+    │   │   ├── zsys_linux_386.go
+    │   │   ├── zsys_linux_amd64.go
+    │   │   ├── zsys_linux_arm64.go
+    │   │   ├── zsys_linux_arm.go
+    │   │   ├── zsys_linux_mips64.go
+    │   │   ├── zsys_linux_mips64le.go
+    │   │   ├── zsys_linux_mips.go
+    │   │   ├── zsys_linux_mipsle.go
+    │   │   ├── zsys_linux_ppc64.go
+    │   │   ├── zsys_linux_ppc64le.go
+    │   │   ├── zsys_linux_ppc.go
+    │   │   ├── zsys_linux_s390x.go
+    │   │   ├── zsys_netbsd.go
+    │   │   ├── zsys_openbsd.go
+    │   │   └── zsys_solaris.go
+    │   ├── ipv6
+    │   │   ├── batch.go
+    │   │   ├── bpf_test.go
+    │   │   ├── control.go
+    │   │   ├── control_rfc2292_unix.go
+    │   │   ├── control_rfc3542_unix.go
+    │   │   ├── control_stub.go
+    │   │   ├── control_test.go
+    │   │   ├── control_unix.go
+    │   │   ├── control_windows.go
+    │   │   ├── defs_darwin.go
+    │   │   ├── defs_dragonfly.go
+    │   │   ├── defs_freebsd.go
+    │   │   ├── defs_linux.go
+    │   │   ├── defs_netbsd.go
+    │   │   ├── defs_openbsd.go
+    │   │   ├── defs_solaris.go
+    │   │   ├── dgramopt.go
+    │   │   ├── doc.go
+    │   │   ├── endpoint.go
+    │   │   ├── example_test.go
+    │   │   ├── genericopt.go
+    │   │   ├── gen.go
+    │   │   ├── header.go
+    │   │   ├── header_test.go
+    │   │   ├── helper.go
+    │   │   ├── iana.go
+    │   │   ├── icmp_bsd.go
+    │   │   ├── icmp.go
+    │   │   ├── icmp_linux.go
+    │   │   ├── icmp_solaris.go
+    │   │   ├── icmp_stub.go
+    │   │   ├── icmp_test.go
+    │   │   ├── icmp_windows.go
+    │   │   ├── mocktransponder_test.go
+    │   │   ├── multicastlistener_test.go
+    │   │   ├── multicastsockopt_test.go
+    │   │   ├── multicast_test.go
+    │   │   ├── payload_cmsg.go
+    │   │   ├── payload_cmsg_go1_8.go
+    │   │   ├── payload_cmsg_go1_9.go
+    │   │   ├── payload.go
+    │   │   ├── payload_nocmsg.go
+    │   │   ├── readwrite_go1_8_test.go
+    │   │   ├── readwrite_go1_9_test.go
+    │   │   ├── readwrite_test.go
+    │   │   ├── sockopt.go
+    │   │   ├── sockopt_posix.go
+    │   │   ├── sockopt_stub.go
+    │   │   ├── sockopt_test.go
+    │   │   ├── sys_asmreq.go
+    │   │   ├── sys_asmreq_stub.go
+    │   │   ├── sys_bpf.go
+    │   │   ├── sys_bpf_stub.go
+    │   │   ├── sys_bsd.go
+    │   │   ├── sys_darwin.go
+    │   │   ├── sys_freebsd.go
+    │   │   ├── sys_linux.go
+    │   │   ├── sys_solaris.go
+    │   │   ├── sys_ssmreq.go
+    │   │   ├── sys_ssmreq_stub.go
+    │   │   ├── sys_stub.go
+    │   │   ├── sys_windows.go
+    │   │   ├── unicastsockopt_test.go
+    │   │   ├── unicast_test.go
+    │   │   ├── zsys_darwin.go
+    │   │   ├── zsys_dragonfly.go
+    │   │   ├── zsys_freebsd_386.go
+    │   │   ├── zsys_freebsd_amd64.go
+    │   │   ├── zsys_freebsd_arm.go
+    │   │   ├── zsys_linux_386.go
+    │   │   ├── zsys_linux_amd64.go
+    │   │   ├── zsys_linux_arm64.go
+    │   │   ├── zsys_linux_arm.go
+    │   │   ├── zsys_linux_mips64.go
+    │   │   ├── zsys_linux_mips64le.go
+    │   │   ├── zsys_linux_mips.go
+    │   │   ├── zsys_linux_mipsle.go
+    │   │   ├── zsys_linux_ppc64.go
+    │   │   ├── zsys_linux_ppc64le.go
+    │   │   ├── zsys_linux_ppc.go
+    │   │   ├── zsys_linux_s390x.go
+    │   │   ├── zsys_netbsd.go
+    │   │   ├── zsys_openbsd.go
+    │   │   └── zsys_solaris.go
+    │   ├── lex
+    │   │   └── httplex
+    │   │       ├── httplex.go
+    │   │       └── httplex_test.go
+    │   ├── LICENSE
+    │   ├── lif
+    │   │   ├── address.go
+    │   │   ├── address_test.go
+    │   │   ├── binary.go
+    │   │   ├── defs_solaris.go
+    │   │   ├── lif.go
+    │   │   ├── link.go
+    │   │   ├── link_test.go
+    │   │   ├── syscall.go
+    │   │   ├── sys.go
+    │   │   ├── sys_solaris_amd64.s
+    │   │   └── zsys_solaris_amd64.go
+    │   ├── nettest
+    │   │   ├── conntest.go
+    │   │   ├── conntest_go16.go
+    │   │   ├── conntest_go17.go
+    │   │   └── conntest_test.go
+    │   ├── netutil
+    │   │   ├── listen.go
+    │   │   └── listen_test.go
+    │   ├── PATENTS
+    │   ├── proxy
+    │   │   ├── direct.go
+    │   │   ├── per_host.go
+    │   │   ├── per_host_test.go
+    │   │   ├── proxy.go
+    │   │   ├── proxy_test.go
+    │   │   └── socks5.go
+    │   ├── publicsuffix
+    │   │   ├── gen.go
+    │   │   ├── list.go
+    │   │   ├── list_test.go
+    │   │   ├── table.go
+    │   │   └── table_test.go
+    │   ├── README.md
+    │   ├── route
+    │   │   ├── address_darwin_test.go
+    │   │   ├── address.go
+    │   │   ├── address_test.go
+    │   │   ├── binary.go
+    │   │   ├── defs_darwin.go
+    │   │   ├── defs_dragonfly.go
+    │   │   ├── defs_freebsd.go
+    │   │   ├── defs_netbsd.go
+    │   │   ├── defs_openbsd.go
+    │   │   ├── interface_announce.go
+    │   │   ├── interface_classic.go
+    │   │   ├── interface_freebsd.go
+    │   │   ├── interface.go
+    │   │   ├── interface_multicast.go
+    │   │   ├── interface_openbsd.go
+    │   │   ├── message_darwin_test.go
+    │   │   ├── message_freebsd_test.go
+    │   │   ├── message.go
+    │   │   ├── message_test.go
+    │   │   ├── route_classic.go
+    │   │   ├── route.go
+    │   │   ├── route_openbsd.go
+    │   │   ├── route_test.go
+    │   │   ├── syscall.go
+    │   │   ├── sys_darwin.go
+    │   │   ├── sys_dragonfly.go
+    │   │   ├── sys_freebsd.go
+    │   │   ├── sys.go
+    │   │   ├── sys_netbsd.go
+    │   │   ├── sys_openbsd.go
+    │   │   ├── zsys_darwin.go
+    │   │   ├── zsys_dragonfly.go
+    │   │   ├── zsys_freebsd_386.go
+    │   │   ├── zsys_freebsd_amd64.go
+    │   │   ├── zsys_freebsd_arm.go
+    │   │   ├── zsys_netbsd.go
+    │   │   └── zsys_openbsd.go
+    │   ├── trace
+    │   │   ├── events.go
+    │   │   ├── histogram.go
+    │   │   ├── histogram_test.go
+    │   │   ├── trace.go
+    │   │   ├── trace_go16.go
+    │   │   ├── trace_go17.go
+    │   │   └── trace_test.go
+    │   ├── webdav
+    │   │   ├── file.go
+    │   │   ├── file_go1.6.go
+    │   │   ├── file_go1.7.go
+    │   │   ├── file_test.go
+    │   │   ├── if.go
+    │   │   ├── if_test.go
+    │   │   ├── internal
+    │   │   │   └── xml
+    │   │   │       ├── atom_test.go
+    │   │   │       ├── example_test.go
+    │   │   │       ├── marshal.go
+    │   │   │       ├── marshal_test.go
+    │   │   │       ├── read.go
+    │   │   │       ├── README
+    │   │   │       ├── read_test.go
+    │   │   │       ├── typeinfo.go
+    │   │   │       ├── xml.go
+    │   │   │       └── xml_test.go
+    │   │   ├── litmus_test_server.go
+    │   │   ├── lock.go
+    │   │   ├── lock_test.go
+    │   │   ├── prop.go
+    │   │   ├── prop_test.go
+    │   │   ├── webdav.go
+    │   │   ├── webdav_test.go
+    │   │   ├── xml.go
+    │   │   └── xml_test.go
+    │   ├── websocket
+    │   │   ├── client.go
+    │   │   ├── dial.go
+    │   │   ├── dial_test.go
+    │   │   ├── exampledial_test.go
+    │   │   ├── examplehandler_test.go
+    │   │   ├── hybi.go
+    │   │   ├── hybi_test.go
+    │   │   ├── server.go
+    │   │   ├── websocket.go
+    │   │   └── websocket_test.go
+    │   └── xsrftoken
+    │       ├── xsrf.go
+    │       └── xsrf_test.go
+    ├── sys.git
+    │   ├── AUTHORS
+    │   ├── codereview.cfg
+    │   ├── CONTRIBUTING.md
+    │   ├── CONTRIBUTORS
+    │   ├── LICENSE
+    │   ├── PATENTS
+    │   ├── plan9
+    │   │   ├── asm_plan9_386.s
+    │   │   ├── asm_plan9_amd64.s
+    │   │   ├── asm_plan9_arm.s
+    │   │   ├── asm.s
+    │   │   ├── const_plan9.go
+    │   │   ├── dir_plan9.go
+    │   │   ├── env_plan9.go
+    │   │   ├── errors_plan9.go
+    │   │   ├── mkall.sh
+    │   │   ├── mkerrors.sh
+    │   │   ├── mksyscall.pl
+    │   │   ├── mksysnum_plan9.sh
+    │   │   ├── pwd_go15_plan9.go
+    │   │   ├── pwd_plan9.go
+    │   │   ├── race0.go
+    │   │   ├── race.go
+    │   │   ├── str.go
+    │   │   ├── syscall.go
+    │   │   ├── syscall_plan9.go
+    │   │   ├── syscall_test.go
+    │   │   ├── zsyscall_plan9_386.go
+    │   │   ├── zsyscall_plan9_amd64.go
+    │   │   ├── zsyscall_plan9_arm.go
+    │   │   └── zsysnum_plan9.go
+    │   ├── README.md
+    │   ├── unix
+    │   │   ├── affinity_linux.go
+    │   │   ├── asm_darwin_386.s
+    │   │   ├── asm_darwin_amd64.s
+    │   │   ├── asm_darwin_arm64.s
+    │   │   ├── asm_darwin_arm.s
+    │   │   ├── asm_dragonfly_amd64.s
+    │   │   ├── asm_freebsd_386.s
+    │   │   ├── asm_freebsd_amd64.s
+    │   │   ├── asm_freebsd_arm.s
+    │   │   ├── asm_linux_386.s
+    │   │   ├── asm_linux_amd64.s
+    │   │   ├── asm_linux_arm64.s
+    │   │   ├── asm_linux_arm.s
+    │   │   ├── asm_linux_mips64x.s
+    │   │   ├── asm_linux_mipsx.s
+    │   │   ├── asm_linux_ppc64x.s
+    │   │   ├── asm_linux_s390x.s
+    │   │   ├── asm_netbsd_386.s
+    │   │   ├── asm_netbsd_amd64.s
+    │   │   ├── asm_netbsd_arm.s
+    │   │   ├── asm_openbsd_386.s
+    │   │   ├── asm_openbsd_amd64.s
+    │   │   ├── asm_openbsd_arm.s
+    │   │   ├── asm_solaris_amd64.s
+    │   │   ├── bluetooth_linux.go
+    │   │   ├── cap_freebsd.go
+    │   │   ├── constants.go
+    │   │   ├── creds_test.go
+    │   │   ├── dev_darwin.go
+    │   │   ├── dev_darwin_test.go
+    │   │   ├── dev_dragonfly.go
+    │   │   ├── dev_dragonfly_test.go
+    │   │   ├── dev_freebsd.go
+    │   │   ├── dev_linux.go
+    │   │   ├── dev_linux_test.go
+    │   │   ├── dev_netbsd.go
+    │   │   ├── dev_netbsd_test.go
+    │   │   ├── dev_openbsd.go
+    │   │   ├── dev_openbsd_test.go
+    │   │   ├── dev_solaris_test.go
+    │   │   ├── dirent.go
+    │   │   ├── endian_big.go
+    │   │   ├── endian_little.go
+    │   │   ├── env_unix.go
+    │   │   ├── errors_freebsd_386.go
+    │   │   ├── errors_freebsd_amd64.go
+    │   │   ├── errors_freebsd_arm.go
+    │   │   ├── example_test.go
+    │   │   ├── export_test.go
+    │   │   ├── fcntl.go
+    │   │   ├── fcntl_linux_32bit.go
+    │   │   ├── gccgo_c.c
+    │   │   ├── gccgo.go
+    │   │   ├── gccgo_linux_amd64.go
+    │   │   ├── linux
+    │   │   │   ├── Dockerfile
+    │   │   │   ├── mkall.go
+    │   │   │   ├── mksysnum.pl
+    │   │   │   └── types.go
+    │   │   ├── mkall.sh
+    │   │   ├── mkerrors.sh
+    │   │   ├── mkpost.go
+    │   │   ├── mksyscall.pl
+    │   │   ├── mksyscall_solaris.pl
+    │   │   ├── mksysctl_openbsd.pl
+    │   │   ├── mksysnum_darwin.pl
+    │   │   ├── mksysnum_dragonfly.pl
+    │   │   ├── mksysnum_freebsd.pl
+    │   │   ├── mksysnum_netbsd.pl
+    │   │   ├── mksysnum_openbsd.pl
+    │   │   ├── mmap_unix_test.go
+    │   │   ├── openbsd_pledge.go
+    │   │   ├── openbsd_test.go
+    │   │   ├── pagesize_unix.go
+    │   │   ├── race0.go
+    │   │   ├── race.go
+    │   │   ├── README.md
+    │   │   ├── sockcmsg_linux.go
+    │   │   ├── sockcmsg_unix.go
+    │   │   ├── str.go
+    │   │   ├── syscall_bsd.go
+    │   │   ├── syscall_bsd_test.go
+    │   │   ├── syscall_darwin_386.go
+    │   │   ├── syscall_darwin_amd64.go
+    │   │   ├── syscall_darwin_arm64.go
+    │   │   ├── syscall_darwin_arm.go
+    │   │   ├── syscall_darwin.go
+    │   │   ├── syscall_dragonfly_amd64.go
+    │   │   ├── syscall_dragonfly.go
+    │   │   ├── syscall_freebsd_386.go
+    │   │   ├── syscall_freebsd_amd64.go
+    │   │   ├── syscall_freebsd_arm.go
+    │   │   ├── syscall_freebsd.go
+    │   │   ├── syscall_freebsd_test.go
+    │   │   ├── syscall.go
+    │   │   ├── syscall_linux_386.go
+    │   │   ├── syscall_linux_amd64_gc.go
+    │   │   ├── syscall_linux_amd64.go
+    │   │   ├── syscall_linux_arm64.go
+    │   │   ├── syscall_linux_arm.go
+    │   │   ├── syscall_linux_gccgo.go
+    │   │   ├── syscall_linux_gc.go
+    │   │   ├── syscall_linux.go
+    │   │   ├── syscall_linux_mips64x.go
+    │   │   ├── syscall_linux_mipsx.go
+    │   │   ├── syscall_linux_ppc64x.go
+    │   │   ├── syscall_linux_s390x.go
+    │   │   ├── syscall_linux_sparc64.go
+    │   │   ├── syscall_linux_test.go
+    │   │   ├── syscall_netbsd_386.go
+    │   │   ├── syscall_netbsd_amd64.go
+    │   │   ├── syscall_netbsd_arm.go
+    │   │   ├── syscall_netbsd.go
+    │   │   ├── syscall_openbsd_386.go
+    │   │   ├── syscall_openbsd_amd64.go
+    │   │   ├── syscall_openbsd_arm.go
+    │   │   ├── syscall_openbsd.go
+    │   │   ├── syscall_solaris_amd64.go
+    │   │   ├── syscall_solaris.go
+    │   │   ├── syscall_solaris_test.go
+    │   │   ├── syscall_test.go
+    │   │   ├── syscall_unix_gc.go
+    │   │   ├── syscall_unix.go
+    │   │   ├── syscall_unix_test.go
+    │   │   ├── timestruct.go
+    │   │   ├── timestruct_test.go
+    │   │   ├── types_darwin.go
+    │   │   ├── types_dragonfly.go
+    │   │   ├── types_freebsd.go
+    │   │   ├── types_netbsd.go
+    │   │   ├── types_openbsd.go
+    │   │   ├── types_solaris.go
+    │   │   ├── zerrors_darwin_386.go
+    │   │   ├── zerrors_darwin_amd64.go
+    │   │   ├── zerrors_darwin_arm64.go
+    │   │   ├── zerrors_darwin_arm.go
+    │   │   ├── zerrors_dragonfly_amd64.go
+    │   │   ├── zerrors_freebsd_386.go
+    │   │   ├── zerrors_freebsd_amd64.go
+    │   │   ├── zerrors_freebsd_arm.go
+    │   │   ├── zerrors_linux_386.go
+    │   │   ├── zerrors_linux_amd64.go
+    │   │   ├── zerrors_linux_arm64.go
+    │   │   ├── zerrors_linux_arm.go
+    │   │   ├── zerrors_linux_mips64.go
+    │   │   ├── zerrors_linux_mips64le.go
+    │   │   ├── zerrors_linux_mips.go
+    │   │   ├── zerrors_linux_mipsle.go
+    │   │   ├── zerrors_linux_ppc64.go
+    │   │   ├── zerrors_linux_ppc64le.go
+    │   │   ├── zerrors_linux_s390x.go
+    │   │   ├── zerrors_linux_sparc64.go
+    │   │   ├── zerrors_netbsd_386.go
+    │   │   ├── zerrors_netbsd_amd64.go
+    │   │   ├── zerrors_netbsd_arm.go
+    │   │   ├── zerrors_openbsd_386.go
+    │   │   ├── zerrors_openbsd_amd64.go
+    │   │   ├── zerrors_openbsd_arm.go
+    │   │   ├── zerrors_solaris_amd64.go
+    │   │   ├── zptrace386_linux.go
+    │   │   ├── zptracearm_linux.go
+    │   │   ├── zptracemipsle_linux.go
+    │   │   ├── zptracemips_linux.go
+    │   │   ├── zsyscall_darwin_386.go
+    │   │   ├── zsyscall_darwin_amd64.go
+    │   │   ├── zsyscall_darwin_arm64.go
+    │   │   ├── zsyscall_darwin_arm.go
+    │   │   ├── zsyscall_dragonfly_amd64.go
+    │   │   ├── zsyscall_freebsd_386.go
+    │   │   ├── zsyscall_freebsd_amd64.go
+    │   │   ├── zsyscall_freebsd_arm.go
+    │   │   ├── zsyscall_linux_386.go
+    │   │   ├── zsyscall_linux_amd64.go
+    │   │   ├── zsyscall_linux_arm64.go
+    │   │   ├── zsyscall_linux_arm.go
+    │   │   ├── zsyscall_linux_mips64.go
+    │   │   ├── zsyscall_linux_mips64le.go
+    │   │   ├── zsyscall_linux_mips.go
+    │   │   ├── zsyscall_linux_mipsle.go
+    │   │   ├── zsyscall_linux_ppc64.go
+    │   │   ├── zsyscall_linux_ppc64le.go
+    │   │   ├── zsyscall_linux_s390x.go
+    │   │   ├── zsyscall_linux_sparc64.go
+    │   │   ├── zsyscall_netbsd_386.go
+    │   │   ├── zsyscall_netbsd_amd64.go
+    │   │   ├── zsyscall_netbsd_arm.go
+    │   │   ├── zsyscall_openbsd_386.go
+    │   │   ├── zsyscall_openbsd_amd64.go
+    │   │   ├── zsyscall_openbsd_arm.go
+    │   │   ├── zsyscall_solaris_amd64.go
+    │   │   ├── zsysctl_openbsd_386.go
+    │   │   ├── zsysctl_openbsd_amd64.go
+    │   │   ├── zsysctl_openbsd_arm.go
+    │   │   ├── zsysnum_darwin_386.go
+    │   │   ├── zsysnum_darwin_amd64.go
+    │   │   ├── zsysnum_darwin_arm64.go
+    │   │   ├── zsysnum_darwin_arm.go
+    │   │   ├── zsysnum_dragonfly_amd64.go
+    │   │   ├── zsysnum_freebsd_386.go
+    │   │   ├── zsysnum_freebsd_amd64.go
+    │   │   ├── zsysnum_freebsd_arm.go
+    │   │   ├── zsysnum_linux_386.go
+    │   │   ├── zsysnum_linux_amd64.go
+    │   │   ├── zsysnum_linux_arm64.go
+    │   │   ├── zsysnum_linux_arm.go
+    │   │   ├── zsysnum_linux_mips64.go
+    │   │   ├── zsysnum_linux_mips64le.go
+    │   │   ├── zsysnum_linux_mips.go
+    │   │   ├── zsysnum_linux_mipsle.go
+    │   │   ├── zsysnum_linux_ppc64.go
+    │   │   ├── zsysnum_linux_ppc64le.go
+    │   │   ├── zsysnum_linux_s390x.go
+    │   │   ├── zsysnum_linux_sparc64.go
+    │   │   ├── zsysnum_netbsd_386.go
+    │   │   ├── zsysnum_netbsd_amd64.go
+    │   │   ├── zsysnum_netbsd_arm.go
+    │   │   ├── zsysnum_openbsd_386.go
+    │   │   ├── zsysnum_openbsd_amd64.go
+    │   │   ├── zsysnum_openbsd_arm.go
+    │   │   ├── ztypes_darwin_386.go
+    │   │   ├── ztypes_darwin_amd64.go
+    │   │   ├── ztypes_darwin_arm64.go
+    │   │   ├── ztypes_darwin_arm.go
+    │   │   ├── ztypes_dragonfly_amd64.go
+    │   │   ├── ztypes_freebsd_386.go
+    │   │   ├── ztypes_freebsd_amd64.go
+    │   │   ├── ztypes_freebsd_arm.go
+    │   │   ├── ztypes_linux_386.go
+    │   │   ├── ztypes_linux_amd64.go
+    │   │   ├── ztypes_linux_arm64.go
+    │   │   ├── ztypes_linux_arm.go
+    │   │   ├── ztypes_linux_mips64.go
+    │   │   ├── ztypes_linux_mips64le.go
+    │   │   ├── ztypes_linux_mips.go
+    │   │   ├── ztypes_linux_mipsle.go
+    │   │   ├── ztypes_linux_ppc64.go
+    │   │   ├── ztypes_linux_ppc64le.go
+    │   │   ├── ztypes_linux_s390x.go
+    │   │   ├── ztypes_linux_sparc64.go
+    │   │   ├── ztypes_netbsd_386.go
+    │   │   ├── ztypes_netbsd_amd64.go
+    │   │   ├── ztypes_netbsd_arm.go
+    │   │   ├── ztypes_openbsd_386.go
+    │   │   ├── ztypes_openbsd_amd64.go
+    │   │   ├── ztypes_openbsd_arm.go
+    │   │   └── ztypes_solaris_amd64.go
+    │   └── windows
+    │       ├── asm_windows_386.s
+    │       ├── asm_windows_amd64.s
+    │       ├── dll_windows.go
+    │       ├── env_windows.go
+    │       ├── eventlog.go
+    │       ├── exec_windows.go
+    │       ├── memory_windows.go
+    │       ├── mksyscall.go
+    │       ├── race0.go
+    │       ├── race.go
+    │       ├── registry
+    │       │   ├── export_test.go
+    │       │   ├── key.go
+    │       │   ├── mksyscall.go
+    │       │   ├── registry_test.go
+    │       │   ├── syscall.go
+    │       │   ├── value.go
+    │       │   └── zsyscall_windows.go
+    │       ├── security_windows.go
+    │       ├── service.go
+    │       ├── str.go
+    │       ├── svc
+    │       │   ├── debug
+    │       │   │   ├── log.go
+    │       │   │   └── service.go
+    │       │   ├── event.go
+    │       │   ├── eventlog
+    │       │   │   ├── install.go
+    │       │   │   ├── log.go
+    │       │   │   └── log_test.go
+    │       │   ├── example
+    │       │   │   ├── beep.go
+    │       │   │   ├── install.go
+    │       │   │   ├── main.go
+    │       │   │   ├── manage.go
+    │       │   │   └── service.go
+    │       │   ├── go12.c
+    │       │   ├── go12.go
+    │       │   ├── go13.go
+    │       │   ├── mgr
+    │       │   │   ├── config.go
+    │       │   │   ├── mgr.go
+    │       │   │   ├── mgr_test.go
+    │       │   │   └── service.go
+    │       │   ├── security.go
+    │       │   ├── service.go
+    │       │   ├── svc_test.go
+    │       │   ├── sys_386.s
+    │       │   └── sys_amd64.s
+    │       ├── syscall.go
+    │       ├── syscall_test.go
+    │       ├── syscall_windows.go
+    │       ├── syscall_windows_test.go
+    │       ├── types_windows_386.go
+    │       ├── types_windows_amd64.go
+    │       ├── types_windows.go
+    │       └── zsyscall_windows.go
+    └── tools.git
+        ├── AUTHORS
+        ├── benchmark
+        │   └── parse
+        │       ├── parse.go
+        │       └── parse_test.go
+        ├── blog
+        │   ├── atom
+        │   │   └── atom.go
+        │   ├── blog.go
+        │   └── blog_test.go
+        ├── cmd
+        │   ├── benchcmp
+        │   │   ├── benchcmp.go
+        │   │   ├── benchcmp_test.go
+        │   │   ├── compare.go
+        │   │   ├── compare_test.go
+        │   │   └── doc.go
+        │   ├── bundle
+        │   │   ├── main.go
+        │   │   ├── main_test.go
+        │   │   └── testdata
+        │   │       ├── out.golden
+        │   │       └── src
+        │   │           ├── domain.name
+        │   │           │   └── importdecl
+        │   │           │       └── p.go
+        │   │           └── initial
+        │   │               ├── a.go
+        │   │               ├── b.go
+        │   │               └── c.go
+        │   ├── callgraph
+        │   │   ├── main.go
+        │   │   ├── main_test.go
+        │   │   └── testdata
+        │   │       └── src
+        │   │           └── pkg
+        │   │               ├── pkg.go
+        │   │               └── pkg_test.go
+        │   ├── compilebench
+        │   │   └── main.go
+        │   ├── cover
+        │   │   ├── cover.go
+        │   │   ├── cover_test.go
+        │   │   ├── doc.go
+        │   │   ├── func.go
+        │   │   ├── html.go
+        │   │   ├── README
+        │   │   └── testdata
+        │   │       ├── main.go
+        │   │       └── test.go
+        │   ├── digraph
+        │   │   ├── digraph.go
+        │   │   └── digraph_test.go
+        │   ├── eg
+        │   │   └── eg.go
+        │   ├── fiximports
+        │   │   ├── main.go
+        │   │   ├── main_test.go
+        │   │   └── testdata
+        │   │       └── src
+        │   │           ├── fruit.io
+        │   │           │   ├── banana
+        │   │           │   │   └── banana.go
+        │   │           │   ├── orange
+        │   │           │   │   └── orange.go
+        │   │           │   └── pear
+        │   │           │       └── pear.go
+        │   │           ├── new.com
+        │   │           │   └── one
+        │   │           │       └── one.go
+        │   │           ├── old.com
+        │   │           │   ├── bad
+        │   │           │   │   └── bad.go
+        │   │           │   └── one
+        │   │           │       └── one.go
+        │   │           └── titanic.biz
+        │   │               ├── bar
+        │   │               │   └── bar.go
+        │   │               └── foo
+        │   │                   └── foo.go
+        │   ├── getgo
+        │   │   ├── Dockerfile
+        │   │   ├── download.go
+        │   │   ├── download_test.go
+        │   │   ├── LICENSE
+        │   │   ├── main.go
+        │   │   ├── main_test.go
+        │   │   ├── make.bash
+        │   │   ├── path.go
+        │   │   ├── path_test.go
+        │   │   ├── README.md
+        │   │   ├── server
+        │   │   │   ├── app.yaml
+        │   │   │   ├── main.go
+        │   │   │   └── README.md
+        │   │   ├── steps.go
+        │   │   ├── system.go
+        │   │   ├── system_unix.go
+        │   │   ├── system_windows.go
+        │   │   └── upload.bash
+        │   ├── go-contrib-init
+        │   │   ├── contrib.go
+        │   │   └── contrib_test.go
+        │   ├── godex
+        │   │   ├── doc.go
+        │   │   ├── gccgo.go
+        │   │   ├── gc.go
+        │   │   ├── godex.go
+        │   │   ├── isAlias18.go
+        │   │   ├── isAlias19.go
+        │   │   ├── print.go
+        │   │   ├── source.go
+        │   │   └── writetype.go
+        │   ├── godoc
+        │   │   ├── appinit.go
+        │   │   ├── autocert.go
+        │   │   ├── blog.go
+        │   │   ├── codewalk.go
+        │   │   ├── dl.go
+        │   │   ├── doc.go
+        │   │   ├── godoc19_test.go
+        │   │   ├── godoc_test.go
+        │   │   ├── handlers.go
+        │   │   ├── index.go
+        │   │   ├── main.go
+        │   │   ├── play.go
+        │   │   ├── README.godoc-app
+        │   │   ├── remotesearch.go
+        │   │   ├── setup-godoc-app.bash
+        │   │   └── x.go
+        │   ├── goimports
+        │   │   ├── doc.go
+        │   │   ├── goimports_gc.go
+        │   │   ├── goimports.go
+        │   │   └── goimports_not_gc.go
+        │   ├── gomvpkg
+        │   │   └── main.go
+        │   ├── gorename
+        │   │   ├── cgo_test.go
+        │   │   ├── gorename_test.go
+        │   │   └── main.go
+        │   ├── gotype
+        │   │   ├── gotype.go
+        │   │   ├── sizesFor18.go
+        │   │   └── sizesFor19.go
+        │   ├── goyacc
+        │   │   ├── doc.go
+        │   │   ├── testdata
+        │   │   │   └── expr
+        │   │   │       ├── expr.y
+        │   │   │       ├── main.go
+        │   │   │       └── README
+        │   │   └── yacc.go
+        │   ├── guru
+        │   │   ├── callees.go
+        │   │   ├── callers.go
+        │   │   ├── callstack.go
+        │   │   ├── definition.go
+        │   │   ├── describe.go
+        │   │   ├── freevars.go
+        │   │   ├── guru.go
+        │   │   ├── guru_test.go
+        │   │   ├── implements.go
+        │   │   ├── isAlias18.go
+        │   │   ├── isAlias19.go
+        │   │   ├── main.go
+        │   │   ├── peers.go
+        │   │   ├── pointsto.go
+        │   │   ├── pos.go
+        │   │   ├── referrers.go
+        │   │   ├── serial
+        │   │   │   └── serial.go
+        │   │   ├── testdata
+        │   │   │   └── src
+        │   │   │       ├── alias
+        │   │   │       │   ├── alias.go
+        │   │   │       │   └── alias.golden
+        │   │   │       ├── calls
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── calls-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── definition-json
+        │   │   │       │   ├── main19.go
+        │   │   │       │   ├── main19.golden
+        │   │   │       │   ├── main.go
+        │   │   │       │   ├── main.golden
+        │   │   │       │   └── type.go
+        │   │   │       ├── describe
+        │   │   │       │   ├── main19.go
+        │   │   │       │   ├── main19.golden
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── describe-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── freevars
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── implements
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── implements-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── implements-methods
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── implements-methods-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── imports
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── lib
+        │   │   │       │   ├── lib.go
+        │   │   │       │   └── sublib
+        │   │   │       │       └── sublib.go
+        │   │   │       ├── main
+        │   │   │       │   └── multi.go
+        │   │   │       ├── peers
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── peers-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── pointsto
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── pointsto-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── README.txt
+        │   │   │       ├── referrers
+        │   │   │       │   ├── ext_test.go
+        │   │   │       │   ├── int_test.go
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── referrers-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── reflection
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── softerrs
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── what
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       ├── what-json
+        │   │   │       │   ├── main.go
+        │   │   │       │   └── main.golden
+        │   │   │       └── whicherrs
+        │   │   │           ├── main.go
+        │   │   │           └── main.golden
+        │   │   ├── unit_test.go
+        │   │   ├── what.go
+        │   │   └── whicherrs.go
+        │   ├── heapview
+        │   │   ├── client
+        │   │   │   ├── main_test.ts
+        │   │   │   ├── main.ts
+        │   │   │   ├── package.json
+        │   │   │   ├── README.md
+        │   │   │   ├── testing
+        │   │   │   │   ├── karma.conf.js
+        │   │   │   │   └── test_main.js
+        │   │   │   ├── tsconfig.json
+        │   │   │   └── tslint.json
+        │   │   ├── internal
+        │   │   │   └── core
+        │   │   │       ├── mmapfile.go
+        │   │   │       ├── mmapfile_other.go
+        │   │   │       └── raw.go
+        │   │   └── main.go
+        │   ├── html2article
+        │   │   └── conv.go
+        │   ├── present
+        │   │   ├── appengine.go
+        │   │   ├── dir.go
+        │   │   ├── doc.go
+        │   │   ├── local.go
+        │   │   ├── play.go
+        │   │   ├── play_http.go
+        │   │   ├── play_socket.go
+        │   │   ├── static
+        │   │   │   ├── article.css
+        │   │   │   ├── dir.css
+        │   │   │   ├── dir.js
+        │   │   │   ├── favicon.ico
+        │   │   │   ├── jquery-ui.js
+        │   │   │   ├── notes.css
+        │   │   │   ├── notes.js
+        │   │   │   ├── slides.js
+        │   │   │   └── styles.css
+        │   │   └── templates
+        │   │       ├── action.tmpl
+        │   │       ├── article.tmpl
+        │   │       ├── dir.tmpl
+        │   │       └── slides.tmpl
+        │   ├── ssadump
+        │   │   └── main.go
+        │   ├── stress
+        │   │   └── stress.go
+        │   ├── stringer
+        │   │   ├── endtoend_test.go
+        │   │   ├── golden_test.go
+        │   │   ├── importer18.go
+        │   │   ├── importer19.go
+        │   │   ├── stringer.go
+        │   │   ├── testdata
+        │   │   │   ├── cgo.go
+        │   │   │   ├── day.go
+        │   │   │   ├── gap.go
+        │   │   │   ├── number.go
+        │   │   │   ├── num.go
+        │   │   │   ├── prime.go
+        │   │   │   ├── unum2.go
+        │   │   │   └── unum.go
+        │   │   └── util_test.go
+        │   ├── tip
+        │   │   ├── cert.go
+        │   │   ├── Dockerfile
+        │   │   ├── godoc.go
+        │   │   ├── godoc.yaml
+        │   │   ├── Makefile
+        │   │   ├── README
+        │   │   ├── talks.go
+        │   │   ├── talks.yaml
+        │   │   ├── tip.go
+        │   │   ├── tip-rc.yaml
+        │   │   ├── tip-service.yaml
+        │   │   └── tip_test.go
+        │   └── toolstash
+        │       ├── buildall
+        │       ├── cmp.go
+        │       └── main.go
+        ├── codereview.cfg
+        ├── container
+        │   └── intsets
+        │       ├── popcnt_amd64.go
+        │       ├── popcnt_amd64.s
+        │       ├── popcnt_gccgo_c.c
+        │       ├── popcnt_gccgo.go
+        │       ├── popcnt_generic.go
+        │       ├── sparse.go
+        │       ├── sparse_test.go
+        │       ├── util.go
+        │       └── util_test.go
+        ├── CONTRIBUTING.md
+        ├── CONTRIBUTORS
+        ├── cover
+        │   └── profile.go
+        ├── go
+        │   ├── ast
+        │   │   └── astutil
+        │   │       ├── enclosing.go
+        │   │       ├── enclosing_test.go
+        │   │       ├── imports.go
+        │   │       ├── imports_test.go
+        │   │       ├── rewrite.go
+        │   │       ├── rewrite_test.go
+        │   │       └── util.go
+        │   ├── buildutil
+        │   │   ├── allpackages.go
+        │   │   ├── allpackages_test.go
+        │   │   ├── fakecontext.go
+        │   │   ├── overlay.go
+        │   │   ├── overlay_test.go
+        │   │   ├── tags.go
+        │   │   ├── tags_test.go
+        │   │   ├── util.go
+        │   │   ├── util_test.go
+        │   │   └── util_windows_test.go
+        │   ├── callgraph
+        │   │   ├── callgraph.go
+        │   │   ├── cha
+        │   │   │   ├── cha.go
+        │   │   │   ├── cha_test.go
+        │   │   │   └── testdata
+        │   │   │       ├── func.go
+        │   │   │       ├── iface.go
+        │   │   │       ├── issue23925.go
+        │   │   │       └── recv.go
+        │   │   ├── rta
+        │   │   │   ├── rta.go
+        │   │   │   ├── rta_test.go
+        │   │   │   └── testdata
+        │   │   │       ├── func.go
+        │   │   │       ├── iface.go
+        │   │   │       └── rtype.go
+        │   │   ├── static
+        │   │   │   ├── static.go
+        │   │   │   └── static_test.go
+        │   │   └── util.go
+        │   ├── gccgoexportdata
+        │   │   ├── gccgoexportdata.go
+        │   │   ├── gccgoexportdata_test.go
+        │   │   └── testdata
+        │   │       ├── errors.gox
+        │   │       ├── long.a
+        │   │       └── short.a
+        │   ├── gcexportdata
+        │   │   ├── example_test.go
+        │   │   ├── gcexportdata.go
+        │   │   ├── gcexportdata_test.go
+        │   │   ├── importer.go
+        │   │   ├── main.go
+        │   │   └── testdata
+        │   │       └── errors-ae16.a
+        │   ├── internal
+        │   │   ├── gccgoimporter
+        │   │   │   ├── backdoor.go
+        │   │   │   ├── gccgoinstallation.go
+        │   │   │   ├── gccgoinstallation_test.go
+        │   │   │   ├── importer19_test.go
+        │   │   │   ├── importer.go
+        │   │   │   ├── importer_test.go
+        │   │   │   ├── parser.go
+        │   │   │   ├── parser_test.go
+        │   │   │   ├── testdata
+        │   │   │   │   ├── alias.gox
+        │   │   │   │   ├── complexnums.go
+        │   │   │   │   ├── complexnums.gox
+        │   │   │   │   ├── conversions.go
+        │   │   │   │   ├── conversions.gox
+        │   │   │   │   ├── escapeinfo.go
+        │   │   │   │   ├── escapeinfo.gox
+        │   │   │   │   ├── imports.go
+        │   │   │   │   ├── imports.gox
+        │   │   │   │   ├── pointer.go
+        │   │   │   │   ├── pointer.gox
+        │   │   │   │   ├── time.gox
+        │   │   │   │   └── unicode.gox
+        │   │   │   └── testenv_test.go
+        │   │   └── gcimporter
+        │   │       ├── bexport19_test.go
+        │   │       ├── bexport.go
+        │   │       ├── bexport_test.go
+        │   │       ├── bimport.go
+        │   │       ├── exportdata.go
+        │   │       ├── gcimporter.go
+        │   │       ├── gcimporter_test.go
+        │   │       ├── isAlias18.go
+        │   │       ├── isAlias19.go
+        │   │       └── testdata
+        │   │           ├── a.go
+        │   │           ├── b.go
+        │   │           ├── exports.go
+        │   │           ├── issue15920.go
+        │   │           ├── issue20046.go
+        │   │           ├── p.go
+        │   │           └── versions
+        │   │               ├── test.go
+        │   │               ├── test_go1.7_0.a
+        │   │               └── test_go1.7_1.a
+        │   ├── loader
+        │   │   ├── cgo.go
+        │   │   ├── cgo_pkgconfig.go
+        │   │   ├── doc.go
+        │   │   ├── example_test.go
+        │   │   ├── loader.go
+        │   │   ├── loader_test.go
+        │   │   ├── stdlib_test.go
+        │   │   ├── testdata
+        │   │   │   ├── a.go
+        │   │   │   ├── badpkgdecl.go
+        │   │   │   └── b.go
+        │   │   └── util.go
+        │   ├── pointer
+        │   │   ├── analysis.go
+        │   │   ├── api.go
+        │   │   ├── callgraph.go
+        │   │   ├── constraint.go
+        │   │   ├── doc.go
+        │   │   ├── example_test.go
+        │   │   ├── gen.go
+        │   │   ├── hvn.go
+        │   │   ├── intrinsics.go
+        │   │   ├── labels.go
+        │   │   ├── opt.go
+        │   │   ├── pointer_test.go
+        │   │   ├── print.go
+        │   │   ├── query.go
+        │   │   ├── query_test.go
+        │   │   ├── reflect.go
+        │   │   ├── solve.go
+        │   │   ├── stdlib_test.go
+        │   │   ├── testdata
+        │   │   │   ├── another.go
+        │   │   │   ├── arrayreflect.go
+        │   │   │   ├── arrays.go
+        │   │   │   ├── a_test.go
+        │   │   │   ├── channels.go
+        │   │   │   ├── chanreflect1.go
+        │   │   │   ├── chanreflect.go
+        │   │   │   ├── context.go
+        │   │   │   ├── conv.go
+        │   │   │   ├── extended.go
+        │   │   │   ├── finalizer.go
+        │   │   │   ├── flow.go
+        │   │   │   ├── fmtexcerpt.go
+        │   │   │   ├── func.go
+        │   │   │   ├── funcreflect.go
+        │   │   │   ├── hello.go
+        │   │   │   ├── interfaces.go
+        │   │   │   ├── issue9002.go
+        │   │   │   ├── mapreflect.go
+        │   │   │   ├── maps.go
+        │   │   │   ├── panic.go
+        │   │   │   ├── recur.go
+        │   │   │   ├── reflect.go
+        │   │   │   ├── rtti.go
+        │   │   │   ├── structreflect.go
+        │   │   │   ├── structs.go
+        │   │   │   └── timer.go
+        │   │   ├── TODO
+        │   │   └── util.go
+        │   ├── ssa
+        │   │   ├── blockopt.go
+        │   │   ├── builder.go
+        │   │   ├── builder_test.go
+        │   │   ├── const.go
+        │   │   ├── create.go
+        │   │   ├── doc.go
+        │   │   ├── dom.go
+        │   │   ├── emit.go
+        │   │   ├── example_test.go
+        │   │   ├── func.go
+        │   │   ├── identical_17.go
+        │   │   ├── identical.go
+        │   │   ├── identical_test.go
+        │   │   ├── interp
+        │   │   │   ├── external_darwin.go
+        │   │   │   ├── external.go
+        │   │   │   ├── external_unix.go
+        │   │   │   ├── interp.go
+        │   │   │   ├── interp_test.go
+        │   │   │   ├── map.go
+        │   │   │   ├── ops.go
+        │   │   │   ├── reflect.go
+        │   │   │   ├── testdata
+        │   │   │   │   ├── a_test.go
+        │   │   │   │   ├── boundmeth.go
+        │   │   │   │   ├── b_test.go
+        │   │   │   │   ├── callstack.go
+        │   │   │   │   ├── complit.go
+        │   │   │   │   ├── coverage.go
+        │   │   │   │   ├── c_test.go
+        │   │   │   │   ├── defer.go
+        │   │   │   │   ├── fieldprom.go
+        │   │   │   │   ├── ifaceconv.go
+        │   │   │   │   ├── ifaceprom.go
+        │   │   │   │   ├── initorder.go
+        │   │   │   │   ├── methprom.go
+        │   │   │   │   ├── mrvchain.go
+        │   │   │   │   ├── range.go
+        │   │   │   │   ├── recover.go
+        │   │   │   │   ├── reflect.go
+        │   │   │   │   └── static.go
+        │   │   │   └── value.go
+        │   │   ├── lift.go
+        │   │   ├── lvalue.go
+        │   │   ├── methods.go
+        │   │   ├── mode.go
+        │   │   ├── print.go
+        │   │   ├── sanity.go
+        │   │   ├── source.go
+        │   │   ├── source_test.go
+        │   │   ├── ssa.go
+        │   │   ├── ssautil
+        │   │   │   ├── load.go
+        │   │   │   ├── load_test.go
+        │   │   │   ├── switch.go
+        │   │   │   ├── switch_test.go
+        │   │   │   ├── testdata
+        │   │   │   │   └── switches.go
+        │   │   │   └── visit.go
+        │   │   ├── stdlib_test.go
+        │   │   ├── testdata
+        │   │   │   ├── objlookup.go
+        │   │   │   ├── structconv.go
+        │   │   │   └── valueforexpr.go
+        │   │   ├── testmain.go
+        │   │   ├── testmain_test.go
+        │   │   ├── util.go
+        │   │   └── wrappers.go
+        │   ├── types
+        │   │   └── typeutil
+        │   │       ├── example_test.go
+        │   │       ├── imports.go
+        │   │       ├── imports_test.go
+        │   │       ├── map.go
+        │   │       ├── map_test.go
+        │   │       ├── methodsetcache.go
+        │   │       ├── ui.go
+        │   │       └── ui_test.go
+        │   └── vcs
+        │       ├── discovery.go
+        │       ├── env.go
+        │       ├── http.go
+        │       ├── vcs.go
+        │       └── vcs_test.go
+        ├── godoc
+        │   ├── analysis
+        │   │   ├── analysis.go
+        │   │   ├── callgraph.go
+        │   │   ├── implements.go
+        │   │   ├── json.go
+        │   │   ├── peers.go
+        │   │   ├── README
+        │   │   └── typeinfo.go
+        │   ├── appengine.go
+        │   ├── cmdline.go
+        │   ├── cmdline_test.go
+        │   ├── corpus.go
+        │   ├── dirtrees.go
+        │   ├── dirtrees_test.go
+        │   ├── dl
+        │   │   ├── dl.go
+        │   │   ├── dl_test.go
+        │   │   └── tmpl.go
+        │   ├── format.go
+        │   ├── godoc17_test.go
+        │   ├── godoc.go
+        │   ├── godoc_test.go
+        │   ├── index.go
+        │   ├── index_test.go
+        │   ├── linkify.go
+        │   ├── meta.go
+        │   ├── page.go
+        │   ├── parser.go
+        │   ├── pres.go
+        │   ├── proxy
+        │   │   └── proxy.go
+        │   ├── README.md
+        │   ├── redirect
+        │   │   ├── hash.go
+        │   │   ├── redirect.go
+        │   │   └── redirect_test.go
+        │   ├── search.go
+        │   ├── server.go
+        │   ├── short
+        │   │   ├── short.go
+        │   │   └── tmpl.go
+        │   ├── snippet.go
+        │   ├── spec.go
+        │   ├── spot.go
+        │   ├── static
+        │   │   ├── analysis
+        │   │   │   ├── call3.png
+        │   │   │   ├── call-eg.png
+        │   │   │   ├── callers1.png
+        │   │   │   ├── callers2.png
+        │   │   │   ├── chan1.png
+        │   │   │   ├── chan2a.png
+        │   │   │   ├── chan2b.png
+        │   │   │   ├── error1.png
+        │   │   │   ├── help.html
+        │   │   │   ├── ident-def.png
+        │   │   │   ├── ident-field.png
+        │   │   │   ├── ident-func.png
+        │   │   │   ├── ipcg-func.png
+        │   │   │   ├── ipcg-pkg.png
+        │   │   │   ├── typeinfo-pkg.png
+        │   │   │   └── typeinfo-src.png
+        │   │   ├── callgraph.html
+        │   │   ├── codewalkdir.html
+        │   │   ├── codewalk.html
+        │   │   ├── dirlist.html
+        │   │   ├── doc.go
+        │   │   ├── error.html
+        │   │   ├── example.html
+        │   │   ├── gen.go
+        │   │   ├── godoc.html
+        │   │   ├── godocs.js
+        │   │   ├── images
+        │   │   │   ├── minus.gif
+        │   │   │   ├── plus.gif
+        │   │   │   ├── treeview-black.gif
+        │   │   │   ├── treeview-black-line.gif
+        │   │   │   ├── treeview-default.gif
+        │   │   │   ├── treeview-default-line.gif
+        │   │   │   ├── treeview-gray.gif
+        │   │   │   └── treeview-gray-line.gif
+        │   │   ├── implements.html
+        │   │   ├── jquery.js
+        │   │   ├── jquery.treeview.css
+        │   │   ├── jquery.treeview.edit.js
+        │   │   ├── jquery.treeview.js
+        │   │   ├── makestatic.go
+        │   │   ├── methodset.html
+        │   │   ├── opensearch.xml
+        │   │   ├── package.html
+        │   │   ├── packageroot.html
+        │   │   ├── package.txt
+        │   │   ├── playground.js
+        │   │   ├── play.js
+        │   │   ├── searchcode.html
+        │   │   ├── searchdoc.html
+        │   │   ├── search.html
+        │   │   ├── search.txt
+        │   │   ├── searchtxt.html
+        │   │   ├── static.go
+        │   │   └── style.css
+        │   ├── tab.go
+        │   ├── template.go
+        │   ├── util
+        │   │   ├── throttle.go
+        │   │   └── util.go
+        │   └── vfs
+        │       ├── emptyvfs.go
+        │       ├── emptyvfs_test.go
+        │       ├── gatefs
+        │       │   ├── gatefs.go
+        │       │   └── gatefs_test.go
+        │       ├── httpfs
+        │       │   └── httpfs.go
+        │       ├── mapfs
+        │       │   ├── mapfs.go
+        │       │   └── mapfs_test.go
+        │       ├── namespace.go
+        │       ├── os.go
+        │       ├── os_test.go
+        │       ├── vfs.go
+        │       └── zipfs
+        │           ├── zipfs.go
+        │           └── zipfs_test.go
+        ├── imports
+        │   ├── fastwalk_dirent_fileno.go
+        │   ├── fastwalk_dirent_ino.go
+        │   ├── fastwalk.go
+        │   ├── fastwalk_portable.go
+        │   ├── fastwalk_test.go
+        │   ├── fastwalk_unix.go
+        │   ├── fix.go
+        │   ├── fix_test.go
+        │   ├── imports.go
+        │   ├── mkindex.go
+        │   ├── mkstdlib.go
+        │   ├── sortimports.go
+        │   └── zstdlib.go
+        ├── LICENSE
+        ├── PATENTS
+        ├── playground
+        │   ├── appengine.go
+        │   ├── appenginevm.go
+        │   ├── common.go
+        │   ├── local.go
+        │   └── socket
+        │       ├── socket.go
+        │       └── socket_test.go
+        ├── present
+        │   ├── args.go
+        │   ├── caption.go
+        │   ├── code.go
+        │   ├── code_test.go
+        │   ├── doc.go
+        │   ├── html.go
+        │   ├── iframe.go
+        │   ├── image.go
+        │   ├── link.go
+        │   ├── link_test.go
+        │   ├── parse.go
+        │   ├── style.go
+        │   ├── style_test.go
+        │   └── video.go
+        ├── README.md
+        ├── refactor
+        │   ├── eg
+        │   │   ├── eg.go
+        │   │   ├── eg_test.go
+        │   │   ├── match.go
+        │   │   ├── rewrite.go
+        │   │   └── testdata
+        │   │       ├── A1.go
+        │   │       ├── A1.golden
+        │   │       ├── A2.go
+        │   │       ├── A2.golden
+        │   │       ├── A.template
+        │   │       ├── B1.go
+        │   │       ├── B1.golden
+        │   │       ├── bad_type.template
+        │   │       ├── B.template
+        │   │       ├── C1.go
+        │   │       ├── C1.golden
+        │   │       ├── C.template
+        │   │       ├── D1.go
+        │   │       ├── D1.golden
+        │   │       ├── D.template
+        │   │       ├── E1.go
+        │   │       ├── E1.golden
+        │   │       ├── E.template
+        │   │       ├── expr_type_mismatch.template
+        │   │       ├── F1.go
+        │   │       ├── F1.golden
+        │   │       ├── F.template
+        │   │       ├── G1.go
+        │   │       ├── G1.golden
+        │   │       ├── G.template
+        │   │       ├── H1.go
+        │   │       ├── H1.golden
+        │   │       ├── H.template
+        │   │       ├── I1.go
+        │   │       ├── I1.golden
+        │   │       ├── I.template
+        │   │       ├── J1.go
+        │   │       ├── J1.golden
+        │   │       ├── J.template
+        │   │       ├── no_after_return.template
+        │   │       ├── no_before.template
+        │   │       └── type_mismatch.template
+        │   ├── importgraph
+        │   │   ├── graph.go
+        │   │   └── graph_test.go
+        │   ├── README
+        │   ├── rename
+        │   │   ├── check.go
+        │   │   ├── mvpkg.go
+        │   │   ├── mvpkg_test.go
+        │   │   ├── rename.go
+        │   │   ├── rename_test.go
+        │   │   ├── spec.go
+        │   │   └── util.go
+        │   └── satisfy
+        │       └── find.go
+        └── third_party
+            ├── moduleloader
+            │   ├── LICENSE
+            │   └── moduleloader.js
+            ├── typescript
+            │   ├── LICENSE
+            │   └── typescript.js
+            └── webcomponents
+                ├── customelements.js
+                └── LICENSE
+
+391 directories, 2498 files

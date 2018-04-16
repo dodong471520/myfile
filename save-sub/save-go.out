@@ -1,0 +1,8 @@
+github.com/daviddengcn/go-colortext
+github.com/daviddengcn/go-colortext/fmt
+github.com/mitchellh/go-homedir
+github.com/motemen/ghq
+github.com/motemen/ghq/utils
+github.com/motemen/go-colorine
+github.com/urfave/cli
+github.com/urfave/cli/altsrc
