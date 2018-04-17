@@ -97,33 +97,6 @@ source $ZSH/oh-my-zsh.sh
 # alias tmux='tmux -2'
 # printf '\e[8;55;120t'
 printf '\e[8;55;215t'
-# for vim
-# export TMUX=tmux
-export GOPATH=/root/go
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/.fzf/bin
-
-export PS="/mnt/hgfs/H/work/package"
-export PG="mirrors.ustc.edu.cn"
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-export LD_LIBRARY_PATH=/usr/local/lib
-export PERL5LIB=$PERL5LIB:/usr/local/lib/perl5/site_perl/5.26.1:/usr/local/lib/perl5/site_perl/5.26.1/x86_64-linux
-
-alias ctagscpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q"
-# alias gl='ghq look $(ghq list|fzf)'
-# alias vim="vimx"
-alias perldb='perl -d:Trepan'
-alias chrome="google-chrome-stable --no-sandbox"
-alias vid='vim --servername gdb'
-unalias gr
-unalias gg
-unalias gd
-unalias gl
-alias gg='gr-get'
-alias gl='cd $(gr tag list|fzf|sed -e "s| *~|$HOME|")'
-# alias gw='gr @work'
-alias gw='gr @work git'
-alias vim='vimx'
 
 # gconftool-2 -t bool -s /apps/rhsm-icon/hide_icon true
 
@@ -132,3 +105,5 @@ alias vim='vimx'
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
 [[ -z "$TMUX" ]] && exec tmux
+
+source ~/.bashrc_post

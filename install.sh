@@ -4,11 +4,9 @@
 source ./install-define.sh
 ln -fs $DOT_PATH/.bashrc ~/.bashrc
 ln -fs $DOT_PATH/.bash_profile ~/.bash_profile
+ln -fs $DOT_PATH/.bashrc_post ~/.bashrc_post
 #cp $DOT_PATH/custom.conf /etc/gdm/custom.conf
 cp $DOT_PATH/my-autostart.desktop ~/.config/autostart/my-autostart.desktop
-
-#
-dnf list installed autoconf||dnf install -y autoconf
 
 #grub
 sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub
@@ -52,7 +50,9 @@ source ./install-fzf.sh
 #gdb
 source ./install-gdb.sh
 #vim
-source ./isntall-vim.sh
+source ./install-vim.sh
 #vim
-source ./isntall-go.sh
+source ./install-go.sh
+#autoconf
+source ./install-autoconf.sh
 cd ..
