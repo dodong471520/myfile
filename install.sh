@@ -7,6 +7,7 @@ ln -fs $DOT_PATH/.bash_profile ~/.bash_profile
 ln -fs $DOT_PATH/.bashrc_post ~/.bashrc_post
 #cp $DOT_PATH/custom.conf /etc/gdm/custom.conf
 cp $DOT_PATH/my-autostart.desktop ~/.config/autostart/my-autostart.desktop
+ln -fs $DOT_PATH/tsocks.conf /etc/tsocks.conf
 
 #grub
 sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub
