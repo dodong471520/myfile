@@ -12,7 +12,6 @@ export PERL5LIB=$PERL5LIB:/usr/local/lib/perl5/site_perl/5.26.1:/usr/local/lib/p
 
 alias ctagscpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q"
 # alias gl='ghq look $(ghq list|fzf)'
-# alias vim="vimx"
 alias perldb='perl -d:Trepan'
 alias chrome="google-chrome-stable --no-sandbox"
 alias vid='vim --servername gdb'
@@ -24,4 +23,4 @@ alias gg='gr-get'
 alias gl='cd $(gr tag list|fzf|sed -e "s| *~|$HOME|")'
 # alias gw='gr @work'
 alias gw='gr @work git'
-alias vim='vimx'
+# alias vim='vimx'
