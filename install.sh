@@ -56,4 +56,6 @@ source ./install-vim.sh
 source ./install-go.sh
 #autoconf
 source ./install-autoconf.sh
+#perl
+source ./install-perl.sh
 cd ..

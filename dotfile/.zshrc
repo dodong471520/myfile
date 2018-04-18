@@ -104,6 +104,6 @@ printf '\e[8;55;215t'
 
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+[[ -z "$TMUX" ]] && exec tmux && tmux ~/.tmux.conf
 
 source ~/.bashrc_post
