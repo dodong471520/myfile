@@ -2,7 +2,7 @@
 
 source ./install-define.sh
 #github
-tree $GIT_PATH >save-sub/save-github.out
+tree -L 2 $GIT_PATH >save-sub/save-github.out
 #dnf
 dnf list installed >save-sub/save-dnf.out
 #save
