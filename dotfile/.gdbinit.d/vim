@@ -228,9 +228,10 @@ python Reload.start()
 
 dashboard -layout source !stack !threads
 dashboard source -style context 12
-set target-async 1
-set pagination off
-set non-stop on
+#  set target-async on
+#  set pagination off
+#  set non-stop on
+#  set scheduler-locking off
 handle SIGPROF nostop noprint pass
 
 define hookpost-file
