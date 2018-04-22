@@ -487,33 +487,51 @@ end
 #
 
 define pdequeue
-	if $argc == 0
-		help pdequeue
-	else
-		set $size = 0
-		set $start_cur = $arg0._M_impl._M_start._M_cur
-		set $start_last = $arg0._M_impl._M_start._M_last
-		set $start_stop = $start_last
-		while $start_cur != $start_stop
-			p *$start_cur
-			set $start_cur++
-			set $size++
-		end
-		set $finish_first = $arg0._M_impl._M_finish._M_first
-		set $finish_cur = $arg0._M_impl._M_finish._M_cur
-		set $finish_last = $arg0._M_impl._M_finish._M_last
-		if $finish_cur < $finish_last
-			set $finish_stop = $finish_cur
-		else
-			set $finish_stop = $finish_last
-		end
-		while $finish_first != $finish_stop
-			p *$finish_first
-			set $finish_first++
-			set $size++
-		end
-		printf "Dequeue size = %u\n", $size
-	end
+    if $argc == 0
+        help pdequeue
+    else
+        set $vec = ($arg0)
+        # size of one data element
+        set $datasize = sizeof(**$vec._M_impl._M_map)
+        # bufsize is the number of nodes per memory page
+        set $bufsize = $datasize < 512 ? 512/$datasize : 1
+
+        set $iter    = $vec._M_impl._M_start
+        set $enditer = $vec._M_impl._M_finish
+        set $mnode  = $iter._M_node
+        set $mfirst = $iter._M_first
+        set $mlast  = $iter._M_last
+        set $mcur   = $iter._M_cur
+        set $size = 0
+
+        while ($mcur != $enditer._M_cur)
+            if $argc == 2
+                printf "elem[%u]: ", $size
+                p *($arg1*)($mcur)
+            end
+            if $argc == 3
+                if $size == $arg2
+                    printf "elem[%u]: ", $size
+                    p *($arg1*)($mcur)
+                end
+            end
+            if $argc == 1
+                printf "elem[%u]: ", $size
+                p *$mcur
+            end
+
+            # now imitate iter.operator++
+            set $mcur++
+            if ($mcur == $mlast)
+                set $mnode++
+                set $mfirst = *$mnode
+                set $mlast = $mfirst + $bufsize
+                set $mcur = $mfirst
+            end
+            set $size++
+        end
+        printf "Dequeue size = %u\n", $size
+    end
 end
 
 document pdequeue
