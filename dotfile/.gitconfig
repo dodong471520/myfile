@@ -18,3 +18,5 @@
     ; proxy = socks5://192.168.1.106:1080
 ; [https]
     ; proxy = socks5://192.168.1.106:1080
+[oh-my-zsh]
+	hide-status = 1
