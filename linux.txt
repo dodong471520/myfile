@@ -5,6 +5,12 @@ mysql 服务启动
 service mysqld start
 mysql> set password for root@localhost = password('147258');  
 
+mysql 允许远程访问
+use mysql;
+select Host,User from user;
+update user set Host='%' where User ='root' limit 1;
+flush privileges;
+
 unixodbc 安装
 cp odbc.ini /etc/odbc.ini
 odbcinst -s -q
