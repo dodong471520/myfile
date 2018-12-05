@@ -1,0 +1,11 @@
+dns 重启 
+service network restart
+
+mysql 服务启动
+service mysqld start
+mysql> set password for root@localhost = password('147258');  
+
+unixodbc 安装
+cp odbc.ini /etc/odbc.ini
+odbcinst -s -q
+isql new_khan -v
