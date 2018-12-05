@@ -14,7 +14,11 @@
       "/root/git/dodong471520/zsummerX",
       "/root/git/gcc-mirror/gcc",
       "/root/git/bminor/glibc",
-      "/root/git/dodong471520/geetest_break"
+      "/root/git/dodong471520/geetest_break",
+      "/root/git/dodong471520/geetest-solver",
+      "/root/git/NVIDIA/vid2vid.git",
+      "/root/git/dodong471520/tensorflow-tutorial",
+      "/root/git"
     ]
   }
 }
