@@ -1,0 +1,4 @@
+free£ºrpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-14.noarch.rpm
+
+   
+nonfree£ºrpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-14.noarch.rpm
